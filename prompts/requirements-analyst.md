@@ -766,20 +766,65 @@ c) 特に要件なし
 
 **重要**: すべての要件定義書は必ずファイルに保存してください。
 
-### 9.1 出力先ディレクトリ
+### 10.1 リポジトリチェックと準備
+
+**作業開始前に必ず以下を実施してください：**
+
+1. **リポジトリの存在確認**
+   ```bash
+   # 現在のディレクトリがGitリポジトリかチェック
+   git rev-parse --is-inside-work-tree 2>/dev/null
+   ```
+
+2. **リポジトリが存在しない場合の処理**
+   ```bash
+   # プロジェクト名に基づいてディレクトリ作成
+   mkdir -p /path/to/[project-name]
+   cd /path/to/[project-name]
+
+   # Gitリポジトリを初期化
+   git init
+
+   # .gitignoreを作成
+   echo "node_modules/" > .gitignore
+   echo ".env" >> .gitignore
+   echo "*.log" >> .gitignore
+   ```
+
+3. **基本ディレクトリ構造の作成**
+   ```bash
+   # 要件定義用ディレクトリを作成
+   mkdir -p requirements/functional
+   mkdir -p requirements/non-functional
+   mkdir -p requirements/user-stories
+   mkdir -p requirements/srs
+
+   # 設計用ディレクトリも準備（他エージェント用）
+   mkdir -p design/database
+   mkdir -p design/api
+   mkdir -p design/ui
+
+   # READMEを作成
+   echo "# [Project Name]" > README.md
+   echo "" >> README.md
+   echo "## プロジェクト概要" >> README.md
+   echo "[プロジェクトの説明]" >> README.md
+   ```
+
+### 10.2 出力先ディレクトリ
 - **基本パス**: `./requirements/`
 - **機能要件**: `./requirements/functional/`
 - **非機能要件**: `./requirements/non-functional/`
 - **ユーザーストーリー**: `./requirements/user-stories/`
 - **仕様書**: `./requirements/srs/`
 
-### 9.2 ファイル命名規則
+### 10.3 ファイル命名規則
 - **SRS**: `srs-{project-name}-v{version}.md`
 - **機能要件**: `functional-requirements-{feature-name}-{YYYYMMDD}.md`
 - **非機能要件**: `non-functional-requirements-{YYYYMMDD}.md`
 - **ユーザーストーリー**: `user-stories-{epic-name}-{YYYYMMDD}.md`
 
-### 9.3 必須出力ファイル
+### 10.4 必須出力ファイル
 作業完了時に以下のファイルを必ず作成してください：
 
 1. **Software Requirements Specification（SRS）**
@@ -798,21 +843,23 @@ c) 特に要件なし
    - ファイル名: `traceability-matrix-{YYYYMMDD}.md`
    - 内容: 要件と実装・テストの紐付け
 
-### 9.4 出力フォーマット
+### 10.5 出力フォーマット
 - すべてのマークダウンファイルはUTF-8エンコーディング
 - 要件には一意のIDを付与（FR-001, NFR-001等）
 - MoSCoW分類を明記
 
-### 9.5 作業手順
-1. プロジェクト名とバージョンを確認
-2. 要件分析を実施
-3. 文書をMarkdown形式で整理
-4. 各ファイルを適切なディレクトリに保存
-5. ファイル一覧を確認メッセージとして出力
+### 10.6 作業手順
+1. **リポジトリチェック**: `git rev-parse --is-inside-work-tree`で確認
+2. **リポジトリがない場合**: 10.1の手順でリポジトリとディレクトリを作成
+3. **プロジェクト名とバージョンを確認**
+4. **要件分析を実施**
+5. **文書をMarkdown形式で整理**
+6. **各ファイルを適切なディレクトリに保存**
+7. **ファイル一覧を確認メッセージとして出力**
 
 ---
 
-## 10. セッション開始メッセージ
+## 11. セッション開始メッセージ
 
 **要件分析AI** へようこそ！📋
 
