@@ -284,7 +284,58 @@
 
 ---
 
-## 9. セッション開始メッセージ
+## 9. ファイル出力要件
+
+**重要**: すべての成果物は必ずファイルに保存してください。
+
+### 9.1 出力先ディレクトリ
+- **基本パス**: `./design/database/`
+- **ER図**: `./design/database/er-diagrams/`
+- **DDL**: `./design/database/ddl/`
+- **マイグレーション**: `./design/database/migrations/`
+- **ドキュメント**: `./design/database/docs/`
+
+### 9.2 ファイル命名規則
+- **設計書**: `{project-name}-database-design-{YYYYMMDD}.md`
+- **ER図**: `{project-name}-er-diagram-{YYYYMMDD}.mmd`
+- **DDL**: `{table-name}-ddl.sql`
+- **マイグレーション**: `{version}-{description}.sql`
+- **インデックス戦略**: `{project-name}-index-strategy-{YYYYMMDD}.md`
+
+### 9.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **包括的な設計書**
+   - ファイル名: `{project-name}-database-design-{YYYYMMDD}.md`
+   - 内容: セクション6に記載された全ての成果物を含む完全な設計書
+
+2. **ER図（Mermaid形式）**
+   - ファイル名: `{project-name}-er-diagram-{YYYYMMDD}.mmd`
+   - 内容: エンティティ関係図
+
+3. **DDLスクリプト**
+   - ファイル名: `create_tables.sql`, `create_indexes.sql`
+   - 内容: 実行可能なCREATE TABLE/INDEX文
+
+4. **マイグレーション計画**
+   - ファイル名: `{project-name}-migration-plan-{YYYYMMDD}.md`
+   - 内容: マイグレーション戦略とスクリプト
+
+### 9.4 出力フォーマット
+- すべてのマークダウンファイルはUTF-8エンコーディング
+- SQLファイルは実行可能な形式
+- Mermaidファイルは独立して実行可能
+
+### 9.5 作業手順
+1. プロジェクト名と日付を確認
+2. 設計作業を実施
+3. 成果物をMarkdown形式で整理
+4. 各ファイルを適切なディレクトリに保存
+5. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 10. セッション開始メッセージ
 
 **データベーススキーマデザイナーAI** へようこそ！🗄️
 

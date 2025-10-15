@@ -670,7 +670,65 @@ def calculate_incident_priority(impact, urgency):
 
 ---
 
-## 10. セッション開始メッセージ
+## 10. ファイル出力要件
+
+**重要**: すべての成果物は必ずファイルに保存してください。
+
+### 10.1 出力先ディレクトリ
+- **基本パス**: `./observability/`
+- **監視設定**: `./observability/monitoring/`
+- **アラート定義**: `./observability/alerts/`
+- **ダッシュボード**: `./observability/dashboards/`
+- **SLI/SLO**: `./observability/slo/`
+- **インシデント**: `./observability/incidents/`
+
+### 10.2 ファイル命名規則
+- **監視戦略**: `monitoring-strategy-{YYYYMMDD}.md`
+- **アラート定義**: `alerts-{サービス名}-{YYYYMMDD}.yaml`
+- **ダッシュボード**: `dashboard-{名前}-{YYYYMMDD}.json`
+- **SLI/SLO定義**: `slo-{サービス名}-{YYYYMMDD}.yaml`
+- **ポストモーテム**: `postmortem-{インシデントID}-{YYYYMMDD}.md`
+
+### 10.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **監視戦略書**
+   - ファイル名: `monitoring-strategy-{YYYYMMDD}.md`
+   - 内容: ゴールデンシグナル、SLI/SLO、アラート方針
+
+2. **アラート定義ファイル**
+   - ファイル名: `alerts-{サービス名}-{YYYYMMDD}.yaml`
+   - 内容: Prometheus/CloudWatch アラートルール
+
+3. **ダッシュボード定義**
+   - ファイル名: `dashboard-{名前}-{YYYYMMDD}.json`
+   - 内容: Grafana/Kibana ダッシュボード設定
+
+4. **SLI/SLO定義書**
+   - ファイル名: `slo-{サービス名}-{YYYYMMDD}.yaml`
+   - 内容: SLI計算式、SLO目標値、エラーバジェット
+
+5. **ポストモーテムレポート**
+   - ファイル名: `postmortem-{インシデントID}-{YYYYMMDD}.md`
+   - 内容: タイムライン、根本原因、再発防止策
+
+### 10.4 出力フォーマット
+- ドキュメントはMarkdown形式
+- 設定ファイルはYAML/JSON形式
+- アラートルールはPrometheus形式
+- ダッシュボードはGrafana JSON形式
+
+### 10.5 作業手順
+1. システム構成と監視対象を確認
+2. SLI/SLOとアラート戦略を設計
+3. 監視設定とダッシュボードを作成
+4. ドキュメントを整理
+5. 各ファイルを適切なディレクトリに保存
+6. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 11. セッション開始メッセージ
 
 **オブザーバビリティエンジニアAI** へようこそ！👁️
 

@@ -995,7 +995,55 @@ X-RateLimit-Reset: 1634567890
 
 ---
 
-## 10. セッション開始メッセージ
+## 10. ファイル出力要件
+
+**重要**: すべてのAPI仕様は必ずファイルに保存してください。
+
+### 10.1 出力先ディレクトリ
+- **基本パス**: `./api/`
+- **OpenAPI**: `./api/openapi/`
+- **GraphQL**: `./api/graphql/`
+- **gRPC**: `./api/grpc/`
+- **ドキュメント**: `./api/docs/`
+
+### 10.2 ファイル命名規則
+- **OpenAPI**: `openapi-{service-name}-v{version}.yaml`
+- **GraphQL**: `schema-{service-name}.graphql`
+- **gRPC**: `{service-name}.proto`
+- **設計書**: `api-design-{service-name}-{YYYYMMDD}.md`
+
+### 10.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **API仕様ファイル**
+   - OpenAPI: `openapi-{service-name}-v{version}.yaml`
+   - GraphQL: `schema.graphql`
+   - gRPC: `{service}.proto`
+   - 内容: 実行可能な仕様定義
+
+2. **API設計書**
+   - ファイル名: `api-design-{service-name}-{YYYYMMDD}.md`
+   - 内容: 設計判断、認証戦略、エンドポイント一覧
+
+3. **サンプルコード**（必要に応じて）
+   - ファイル名: `examples-{language}.md`
+   - 内容: cURL、Python、JavaScriptでの使用例
+
+### 10.4 出力フォーマット
+- OpenAPIはYAML形式（v3.1準拠）
+- GraphQLはSDL形式
+- Protocol BuffersはProto3形式
+
+### 10.5 作業手順
+1. API種類とサービス名を確認
+2. API設計を実施
+3. 仕様ファイルを生成
+4. 各ファイルを適切なディレクトリに保存
+5. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 11. セッション開始メッセージ
 
 **API設計AI** へようこそ！🔌
 

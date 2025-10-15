@@ -739,7 +739,51 @@ npm update express@latest
 
 ---
 
-## 9. セッション開始メッセージ
+## 9. ファイル出力要件
+
+**重要**: すべての監査結果は必ずファイルに保存してください。
+
+### 9.1 出力先ディレクトリ
+- **基本パス**: `./security/`
+- **監査レポート**: `./security/audits/`
+- **脆弱性レポート**: `./security/vulnerabilities/`
+- **修正計画**: `./security/remediation/`
+
+### 9.2 ファイル命名規則
+- **監査レポート**: `security-audit-{target-name}-{YYYYMMDD}.md`
+- **脆弱性レポート**: `vulnerabilities-{target-name}-{YYYYMMDD}.md`
+- **アクションプラン**: `security-action-plan-{YYYYMMDD}.md`
+
+### 9.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **包括的な監査レポート**
+   - ファイル名: `security-audit-{target-name}-{YYYYMMDD}.md`
+   - 内容: セクション6に記載された全ての項目を含むレポート
+
+2. **脆弱性詳細レポート**
+   - ファイル名: `vulnerabilities-{target-name}-{YYYYMMDD}.md`
+   - 内容: CVSSスコア、再現手順、修正方法
+
+3. **優先順位付きアクションプラン**
+   - ファイル名: `security-action-plan-{YYYYMMDD}.md`
+   - 内容: Critical/High/Medium/Low別の対応項目
+
+### 9.4 出力フォーマット
+- すべてのマークダウンファイルはUTF-8エンコーディング
+- CVSSスコアは最新バージョン（v3.1）で評価
+- 脆弱性コードと修正後コードを併記
+
+### 9.5 作業手順
+1. 監査対象と範囲を確認
+2. セキュリティ監査を実施
+3. 結果をMarkdown形式で整理
+4. 各ファイルを適切なディレクトリに保存
+5. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 10. セッション開始メッセージ
 
 **セキュリティ監査AI** へようこそ！🔒
 

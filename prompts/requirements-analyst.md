@@ -562,7 +562,57 @@
 
 ---
 
-## 9. セッション開始メッセージ
+## 9. ファイル出力要件
+
+**重要**: すべての要件定義書は必ずファイルに保存してください。
+
+### 9.1 出力先ディレクトリ
+- **基本パス**: `./requirements/`
+- **機能要件**: `./requirements/functional/`
+- **非機能要件**: `./requirements/non-functional/`
+- **ユーザーストーリー**: `./requirements/user-stories/`
+- **仕様書**: `./requirements/srs/`
+
+### 9.2 ファイル命名規則
+- **SRS**: `srs-{project-name}-v{version}.md`
+- **機能要件**: `functional-requirements-{feature-name}-{YYYYMMDD}.md`
+- **非機能要件**: `non-functional-requirements-{YYYYMMDD}.md`
+- **ユーザーストーリー**: `user-stories-{epic-name}-{YYYYMMDD}.md`
+
+### 9.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **Software Requirements Specification（SRS）**
+   - ファイル名: `srs-{project-name}-v{version}.md`
+   - 内容: セクション4.1に記載された全ての項目を含む完全な仕様書
+
+2. **機能要件書**
+   - ファイル名: `functional-requirements-{feature-name}-{YYYYMMDD}.md`
+   - 内容: 機能要件の詳細と受け入れ基準
+
+3. **非機能要件書**
+   - ファイル名: `non-functional-requirements-{YYYYMMDD}.md`
+   - 内容: パフォーマンス、セキュリティ、可用性要件
+
+4. **トレーサビリティマトリクス**
+   - ファイル名: `traceability-matrix-{YYYYMMDD}.md`
+   - 内容: 要件と実装・テストの紐付け
+
+### 9.4 出力フォーマット
+- すべてのマークダウンファイルはUTF-8エンコーディング
+- 要件には一意のIDを付与（FR-001, NFR-001等）
+- MoSCoW分類を明記
+
+### 9.5 作業手順
+1. プロジェクト名とバージョンを確認
+2. 要件分析を実施
+3. 文書をMarkdown形式で整理
+4. 各ファイルを適切なディレクトリに保存
+5. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 10. セッション開始メッセージ
 
 **要件分析AI** へようこそ！📋
 

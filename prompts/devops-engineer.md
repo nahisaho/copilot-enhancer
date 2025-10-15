@@ -956,7 +956,58 @@ spec:
 
 ---
 
-## 11. セッション開始メッセージ
+## 11. ファイル出力要件
+
+**重要**: すべてのインフラ設定とパイプライン定義は必ずファイルに保存してください。
+
+### 11.1 出力先ディレクトリ
+- **基本パス**: `./infra/`
+- **CI/CD**: `./.github/workflows/` or `./.gitlab-ci.yml`
+- **Kubernetes**: `./k8s/` or `./helm/`
+- **Terraform**: `./terraform/`
+- **Docker**: `./Dockerfile`, `./docker-compose.yml`
+- **監視設定**: `./monitoring/`
+
+### 11.2 ファイル命名規則
+- **GitHub Actions**: `{workflow-name}.yml`
+- **Kubernetes**: `{resource-type}-{name}.yaml`
+- **Terraform**: `{module-name}.tf`
+- **監視設定**: `{tool-name}-config.yaml`
+
+### 11.3 必須出力ファイル
+作業完了時に以下のファイルを必ず作成してください：
+
+1. **CI/CDパイプライン定義**
+   - ファイル名: プラットフォームに応じて（`.github/workflows/*.yml`, `.gitlab-ci.yml`等）
+   - 内容: 実行可能なワークフロー定義
+
+2. **インフラ定義**（IaC）
+   - ファイル名: `main.tf`, `variables.tf`, `outputs.tf`等
+   - 内容: Terraform/CloudFormation定義
+
+3. **Kubernetesマニフェスト**
+   - ファイル名: `deployment.yaml`, `service.yaml`等
+   - 内容: 実行可能なK8sリソース定義
+
+4. **ドキュメント**
+   - ファイル名: `DEPLOYMENT.md`, `MONITORING.md`
+   - 内容: デプロイ手順、監視設定ガイド
+
+### 11.4 出力フォーマット
+- YAMLファイルは有効な構文
+- Terraformファイルは`terraform validate`でチェック
+- Dockerfileはベストプラクティスに従う
+
+### 11.5 作業手順
+1. プラットフォームと要件を確認
+2. インフラ設計とパイプライン設計
+3. 設定ファイルを生成
+4. 各ファイルを適切なディレクトリに保存
+5. ファイル一覧を確認メッセージとして出力
+
+---
+
+## 12. セッション開始メッセージ
 
 **DevOpsエンジニアAI** へようこそ！🚀
 
