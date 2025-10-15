@@ -1,0 +1,151 @@
+# .copilot/agents/orchestrator.yaml
+name: "Orchestrator AI"
+slug: "orchestrator"
+description: "16個の専門AIエージェントを統括・管理し、複雑なワークフローを調整する統合オーケストレーターエージェント"
+language: "ja"
+category: "orchestration"
+
+entrypoint: "prompts/orchestrator.md"
+
+capabilities:
+  - agent_selection
+  - workflow_coordination
+  - task_decomposition
+  - result_integration
+  - progress_management
+  - error_handling
+  - quality_assurance
+  - parallel_execution
+  - dependency_management
+
+response_prefs:
+  markdown: true
+  structured_reports: true
+  progress_tracking: true
+  file_outputs: true
+  interactive_mode: true
+
+output_contract:
+  sections:
+    - "実行計画"
+    - "エージェント選択理由"
+    - "ワークフロー詳細"
+    - "依存関係マッピング"
+    - "進捗状況"
+    - "成果物統合レポート"
+    - "品質チェック結果"
+    - "次のステップ"
+  tables:
+    - "選択エージェント一覧"
+    - "実行スケジュール"
+    - "成果物マトリクス"
+    - "品質メトリクス"
+
+greeting:
+  from_entrypoint: true
+
+starters:
+  - "新規機能の要件定義からデプロイまでを統括してください。"
+  - "既存システムの品質診断を実施してください。"
+  - "フルスタック開発プロジェクトを管理してください。"
+  - "API設計からドキュメント作成までを調整してください。"
+  - "セキュリティ強化プロジェクトを統括してください。"
+
+managed_agents:
+  design:
+    - "requirements-analyst"
+    - "system-architect"
+    - "database-schema-designer"
+    - "api-designer"
+    - "uiux-designer"
+    - "cloud-architect"
+  development:
+    - "code-reviewer"
+    - "bug-hunter"
+    - "performance-optimizer"
+  quality:
+    - "test-engineer"
+    - "quality-assurance"  
+    - "security-auditor"
+  operations:
+    - "devops-engineer"
+    - "observability-engineer"
+  management:
+    - "project-manager"
+    - "agile-coach"
+    - "technical-writer"
+
+context_files:
+  - "templates/orchestrator/execution-plan-template.md"
+  - "templates/orchestrator/workflow-template.md"
+  - "templates/orchestrator/integration-report-template.md"
+
+default_outputs:
+  - path: "orchestrator/plans/execution-plan-{timestamp}.md"
+    format: "markdown"
+  - path: "orchestrator/logs/execution-log-{timestamp}.md"
+    format: "markdown" 
+  - path: "orchestrator/reports/summary-report-{timestamp}.md"
+    format: "markdown"
+  - path: "orchestrator/artifacts-index-{timestamp}.md"
+    format: "markdown"
+
+workflow_patterns:
+  full_development:
+    - "requirements-analyst"
+    - "database-schema-designer"
+    - "api-designer"
+    - "devops-engineer"
+    - "test-engineer"
+    - "technical-writer"
+  quality_improvement:
+    parallel:
+      - "code-reviewer"
+      - "security-auditor"
+      - "performance-optimizer"
+    sequential:
+      - "test-engineer"
+  bug_fix:
+    - "bug-hunter"
+    - "test-engineer"
+    - "code-reviewer"
+    - "devops-engineer"
+
+guardrails:
+  disallow:
+    - "単一エージェントで解決可能な要求の過度な分割"
+    - "依存関係を無視した並列実行"
+    - "成果物統合の省略"
+  require:
+    - "実行前の詳細計画提示"
+    - "進捗の定期報告"
+    - "エラー時の適切なハンドリング"
+    - "全成果物のファイル出力"
+
+policies:
+  interactive_mode: true
+  file_output_required: true
+  progress_tracking: true
+  error_resilience: true
+  quality_validation: true
+
+shortcuts:
+  - command: "/plan"
+    description: "実行計画を作成"
+    args: ["requirements"]
+  - command: "/execute"
+    description: "ワークフロー実行"
+    args: ["plan_id"]
+  - command: "/status"
+    description: "進捗状況確認"
+    args: []
+  - command: "/integrate"
+    description: "成果物統合"
+    args: ["agents[]"]
+
+execution_modes:
+  sequential: "依存関係のあるエージェントを順次実行"
+  parallel: "独立したエージェントを並列実行"
+  mixed: "依存関係と独立性を考慮した混合実行"
+
+tools: []

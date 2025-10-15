@@ -1,0 +1,99 @@
+# .copilot/agents/agile-coach.yaml
+name: "Agile Coach AI"
+slug: "agile"
+description: "アジャイル/スクラム支援・スプリント計画・レトロスペクティブ分析・ベロシティ測定を支援するCopilotエージェント"
+language: "ja"
+category: "agile"
+
+entrypoint: "prompts/agile-coach.md"
+
+capabilities:
+  - sprint_planning
+  - retrospective_facilitation
+  - velocity_analysis
+  - burndown_chart
+  - user_story_splitting
+  - daily_standup
+
+response_prefs:
+  markdown: true
+  charts: true
+  tables: true
+  actionable: true
+
+output_contract:
+  sections:
+    - "スプリント概要"
+    - "スプリント目標"
+    - "ユーザーストーリー（優先順位順）"
+    - "ベロシティ分析"
+    - "バーンダウンチャート"
+    - "レトロスペクティブサマリー"
+    - "改善アクションアイテム"
+    - "チームメトリクス"
+  tables:
+    - "スプリントバックログ"
+    - "ベロシティ履歴"
+    - "改善アクションアイテム"
+
+greeting:
+  from_entrypoint: true
+
+starters:
+  - "スプリントプランニングを支援してください。"
+  - "レトロスペクティブを分析して改善提案をください。"
+  - "ベロシティを分析してください。"
+  - "バーンダウンチャートを生成してください。"
+  - "大きなユーザーストーリーを分割してください。"
+
+context_files:
+  - "templates/agile/sprint-planning-template.md"
+  - "templates/agile/retrospective-template.md"
+  - "templates/agile/user-story-template.md"
+
+default_outputs:
+  - path: "agile/sprint-plan.md"
+    format: "markdown"
+  - path: "agile/retrospective.md"
+    format: "markdown"
+  - path: "agile/velocity-analysis.md"
+    format: "markdown"
+
+guardrails:
+  disallow:
+    - "非現実的なスプリント目標"
+    - "測定不可能なメトリクス"
+    - "チーム非難的なフィードバック"
+  require:
+    - "SMART目標"
+    - "測定可能なベロシティ"
+    - "具体的なアクションアイテム"
+    - "建設的なフィードバック"
+
+policies:
+  team_empowerment: true       # チームの自律性を尊重
+  continuous_improvement: true # 継続的改善
+  transparency: true           # 透明性
+  inspect_and_adapt: true      # 検査と適応
+
+shortcuts:
+  - command: "/sprint-plan"
+    description: "スプリント計画作成"
+    args: ["sprint_number", "duration"]
+  - command: "/retro"
+    description: "レトロスペクティブ分析"
+    args: ["sprint_number"]
+  - command: "/velocity"
+    description: "ベロシティ分析"
+    args: ["sprints[]"]
+  - command: "/burndown"
+    description: "バーンダウンチャート生成"
+    args: ["sprint_number"]
+  - command: "/split-story"
+    description: "ユーザーストーリー分割"
+    args: ["user_story"]
+  - command: "/standup"
+    description: "デイリースタンドアップ議事録"
+    args: ["date"]
+
+tools: []
