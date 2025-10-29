@@ -11,6 +11,7 @@ CI/CD・インフラ自動化・監視・デプロイメント戦略を設計し
 - **コンテナ**: Docker・Docker Compose・Kubernetes・Helm
 - **IaC**: Terraform・CloudFormation・Ansible・Pulumi
 - **クラウドプラットフォーム**: AWS・GCP・Azure
+- **AI開発ツール統合**: Azure MCP Server・GitHub Copilot・AI Agents
 - **監視・ロギング**: Prometheus・Grafana・ELKスタック・Datadog
 - **セキュリティ**: シークレット管理・脆弱性スキャン・コンプライアンス
 - **デプロイ戦略**: Blue-Green・Canary・Rolling Deployment
@@ -935,6 +936,88 @@ spec:
       --exit-code 1 \
       myapp:${{ github.sha }}
 ```
+
+### 9.3 Azure MCP Server統合
+
+Azure MCP Server（Model Context Protocol Server）は、AI開発ツール（GitHub Copilot、OpenAI Agents SDK、Semantic Kernelなど）とAzureクラウドサービスを統合するためのツールです。
+
+#### 概要
+- **ステータス**: Public Preview (2025年5月リリース)
+- **公式ドキュメント**: [Microsoft Learn](https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/)
+- **認証**: Azure Entra ID（Azure Identityライブラリ経由）
+- **対応IDE**: VS Code、Cursor、Cline、IntelliJ、Visual Studio、Windsurf
+
+#### サポートされるAzureサービス
+- **Azure Storage**: Blob/File/Queue/Tableの操作
+- **Azure Cosmos DB**: データベースクエリ実行
+- **Azure AI Search**: インデックス検索、クエリ実行
+- **Azure Key Vault**: シークレット、キー、証明書の管理
+- **Azure Database for PostgreSQL**: データベース操作、クエリ実行
+- **Azure Data Explorer (Kusto)**: KQLクエリ実行
+- **Azure Service Bus**: メッセージング操作
+- **Azure Developer Best Practices**: DevOpsベストプラクティスの提案
+
+#### インストール方法
+
+**npm経由（Node.js）:**
+```bash
+npm install -g @azure/mcp-server-azure
+```
+
+**pip経由（Python）:**
+```bash
+pip install azure-mcp-server
+```
+
+**VS Code統合:**
+1. VS Codeで GitHub Copilot拡張機能をインストール
+2. VS Code設定（`settings.json`）にMCPサーバーを追加:
+```json
+{
+  "github.copilot.advanced": {
+    "mcpServers": {
+      "azure": {
+        "command": "npx",
+        "args": ["-y", "@azure/mcp-server-azure"]
+      }
+    }
+  }
+}
+```
+
+#### 使用例
+
+**自然言語でAzureリソースを操作:**
+```
+GitHub Copilot: "Azure Storage accountのリストを表示して"
+→ Azure MCP Serverが自動的にAzure CLIを実行し、結果を返す
+
+GitHub Copilot: "production-dbのPostgreSQLデータベースに接続して、users テーブルの件数を取得して"
+→ 自動的にデータベースに接続し、クエリを実行
+```
+
+**DevOps自動化での活用:**
+- Azureリソースの状態確認
+- デプロイメント後の検証
+- インフラの健全性チェック
+- Key Vaultからのシークレット取得
+- Service Busメッセージの監視
+
+#### セキュリティのベストプラクティス
+1. **認証**: Azure Entra ID（旧Azure AD）を使用し、最小権限の原則を適用
+2. **環境分離**: 開発環境での使用を推奨（本番環境での直接操作は避ける）
+3. **監査ログ**: Azure Activity Logで操作履歴を記録
+4. **アクセス制御**: RBAC（Role-Based Access Control）で適切な権限を設定
+
+#### 注意事項
+- 現在Public Previewのため、本番環境での使用は慎重に検討
+- 外部アプリケーションでの使用は推奨されていない
+- 主に開発環境でのローカル開発・テスト用途を想定
+
+#### 参考リンク
+- [Azure MCP Server 公式ドキュメント](https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/)
+- [Azure MCP Server GitHubリポジトリ](https://github.com/microsoft/azure-mcp-server)
+- [Model Context Protocol 仕様](https://modelcontextprotocol.io/)
 
 ---
 
