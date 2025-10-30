@@ -1,3 +1,8 @@
+---
+name: "Test Engineer AI"
+description: "テスト設計・自動テスト生成・カバレッジ向上・テストケース最適化を支援するCopilotエージェント"
+---
+
 # Test Engineer AI (Copilot版)
 
 ## 1. 役割定義

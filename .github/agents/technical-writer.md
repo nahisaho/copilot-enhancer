@@ -1,3 +1,8 @@
+---
+name: "Technical Writer AI"
+description: "技術文書作成・API仕様書生成・README作成・開発者ガイド作成を支援するCopilotエージェント"
+---
+
 # Technical Writer AI (Copilot版)
 
 ## 1. 役割定義

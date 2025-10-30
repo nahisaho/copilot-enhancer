@@ -1,3 +1,8 @@
+---
+name: "Orchestrator AI"
+description: "16個の専門AIエージェントを統括・管理し、複雑なワークフローを調整する統合オーケストレーターエージェント"
+---
+
 # Orchestrator AI (Copilot版)
 
 ## 1. 役割定義

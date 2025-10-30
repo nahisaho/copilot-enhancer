@@ -103,48 +103,48 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 ## 開発フェーズ
 
 ### フェーズ0: プロジェクト計画（1週間）
-- 要件定義（`@requirements`）
-- プロジェクト計画策定（`@pm`）
-- スプリント計画（`@agile`）
-- 技術選定（`@architect`）
+- 要件定義（`@workspace /requirements-analyst`）
+- プロジェクト計画策定（`@workspace /project-manager`）
+- スプリント計画（`@workspace /agile-coach`）
+- 技術選定（`@workspace /system-architect`）
 
 ### フェーズ1: 基盤設計（2週間）
-- アーキテクチャ設計（`@architect`）
-- データベーススキーマ設計（`@db-schema`）
-- API設計（`@api-design`）
-- UI/UX設計（`@uiux`）
+- アーキテクチャ設計（`@workspace /system-architect`）
+- データベーススキーマ設計（`@workspace /database-schema-designer`）
+- API設計（`@workspace /api-designer`）
+- UI/UX設計（`@workspace /uiux-designer`）
 
 ### フェーズ2: 開発環境構築（1週間）
-- 開発環境セットアップ（`@devops`）
-- CI/CD構築（`@devops`）
-- クラウドインフラ構築（`@cloud`）
-- テスト戦略策定（`@qa`）
+- 開発環境セットアップ（`@workspace /devops-engineer`）
+- CI/CD構築（`@workspace /devops-engineer`）
+- クラウドインフラ構築（`@workspace /cloud-architect`）
+- テスト戦略策定（`@workspace /quality-assurance`）
 
 ### フェーズ3: CSVインポート機能開発（2週間）
 - CSVパーサー実装
 - バリデーション実装
 - データベース登録処理
-- パフォーマンス最適化（`@performance`）
+- パフォーマンス最適化（`@workspace /performance-optimizer`）
 
 ### フェーズ4: REST API開発（3週間）
 - CRUD エンドポイント実装
 - フィルタリング・ページネーション
-- 認証・認可（`@security`）
-- コードレビュー（`@code-review`）
+- 認証・認可（`@workspace /security-auditor`）
+- コードレビュー（`@workspace /code-reviewer`）
 
 ### フェーズ5: テスト・品質保証（2週間）
-- ユニットテスト（`@test-engineer`）
-- 統合テスト（`@test-engineer`）
-- セキュリティ監査（`@security`）
-- パフォーマンステスト（`@performance`）
-- 品質メトリクス評価（`@qa`）
-- バグ修正（`@bug-hunter`）
+- ユニットテスト（`@workspace /test-engineer`）
+- 統合テスト（`@workspace /test-engineer`）
+- セキュリティ監査（`@workspace /security-auditor`）
+- パフォーマンステスト（`@workspace /performance-optimizer`）
+- 品質メトリクス評価（`@workspace /quality-assurance`）
+- バグ修正（`@workspace /bug-hunter`）
 
 ### フェーズ6: デプロイ・運用準備（1週間）
-- 本番環境デプロイ（`@devops`）
-- 可観測性設定（`@observability`）
-- ドキュメント整備（`@tech-writer`）
-- レトロスペクティブ（`@agile`）
+- 本番環境デプロイ（`@workspace /devops-engineer`）
+- 可観測性設定（`@workspace /observability-engineer`）
+- ドキュメント整備（`@workspace /technical-writer`）
+- レトロスペクティブ（`@workspace /agile-coach`）
 
 **総開発期間**: 約12週間（3ヶ月）
 **使用エージェント**: 全17エージェント
@@ -157,7 +157,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ0-1: 要件分析
 
-**使用エージェント**: `@requirements`
+**使用エージェント**: `@workspace /requirements-analyst`
 
 ```
 @requirements OneRoster API Hubプロジェクトの要件を分析してください。
@@ -195,7 +195,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ0-2: プロジェクト計画策定
 
-**使用エージェント**: `@pm`
+**使用エージェント**: `@workspace /project-manager`
 
 ```
 @pm 以下の要件に基づいてプロジェクト計画を立ててください。
@@ -231,7 +231,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ0-3: スプリント計画（新規）
 
-**使用エージェント**: `@agile`
+**使用エージェント**: `@workspace /agile-coach`
 
 ```
 @agile OneRoster API Hub開発の12週間スプリント計画を立ててください。
@@ -270,7 +270,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ1-1: アーキテクチャ設計
 
-**使用エージェント**: `@architect`
+**使用エージェント**: `@workspace /system-architect`
 
 ```
 @architect OneRoster API Hub のシステムアーキテクチャを設計してください。
@@ -311,7 +311,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ1-2: データベーススキーマ設計
 
-**使用エージェント**: `@db-schema`
+**使用エージェント**: `@workspace /database-schema-designer`
 
 ```
 @db-schema OneRoster v1.2 仕様に基づいてデータベーススキーマを設計してください。
@@ -373,7 +373,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ1-3: API設計
 
-**使用エージェント**: `@api-design`
+**使用エージェント**: `@workspace /api-designer`
 
 ```
 @api-design OneRoster v1.2 REST API仕様に準拠したAPIを設計してください。
@@ -432,7 +432,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ1-4: UI/UX設計（新規）
 
-**使用エージェント**: `@uiux`
+**使用エージェント**: `@workspace /uiux-designer`
 
 ```
 @uiux OneRoster API Hub管理画面のUI/UX設計をしてください。
@@ -482,7 +482,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ2-1: DevOps基盤構築
 
-**使用エージェント**: `@devops`
+**使用エージェント**: `@workspace /devops-engineer`
 
 ```
 @devops OneRoster API Hubの開発環境とCI/CDパイプラインを構築してください。
@@ -536,7 +536,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ2-2: クラウドインフラ設計
 
-**使用エージェント**: `@cloud`
+**使用エージェント**: `@workspace /cloud-architect`
 
 ```
 @cloud OneRoster API Hub のAWSインフラを設計してください。
@@ -582,7 +582,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ2-3: テスト戦略策定（新規）
 
-**使用エージェント**: `@qa`
+**使用エージェント**: `@workspace /quality-assurance`
 
 ```
 @qa OneRoster API Hub のテスト戦略を策定してください。
@@ -636,7 +636,7 @@ OneRoster は、教育機関間でロスター情報（学生・教員・クラ�
 
 ### ステップ3-1: CSVパーサー実装
 
-**使用エージェント**: `@code-review`（実装後）
+**使用エージェント**: `@workspace /code-reviewer`（実装後）
 
 ```python
 # まず実装（例）
@@ -683,7 +683,7 @@ class OneRosterCSVImporter:
 
 ### ステップ3-2: パフォーマンス最適化（新規）
 
-**使用エージェント**: `@performance`
+**使用エージェント**: `@workspace /performance-optimizer`
 
 ```
 @performance CSVインポート機能のパフォーマンスを最適化してください。
@@ -725,7 +725,7 @@ def import_users(csv_path: Path):
 
 ### ステップ3-3: テスト生成
 
-**使用エージェント**: `@test-engineer`
+**使用エージェント**: `@workspace /test-engineer`
 
 ```
 @test-engineer CSVインポート機能のテストを生成してください。
@@ -816,7 +816,7 @@ async def get_org(
 
 ### ステップ4-2: 認証・認可実装
 
-**使用エージェント**: `@security`
+**使用エージェント**: `@workspace /security-auditor`
 
 ```
 @security OAuth 2.0認証を実装しました。セキュリティレビューをお願いします。
@@ -844,7 +844,7 @@ async def get_org(
 
 ### ステップ4-3: API統合テスト
 
-**使用エージェント**: `@test-engineer`
+**使用エージェント**: `@workspace /test-engineer`
 
 ```
 @test-engineer OneRoster APIの統合テストを生成してください。
@@ -883,7 +883,7 @@ async def get_org(
 
 ### ステップ5-1: セキュリティ監査
 
-**使用エージェント**: `@security`
+**使用エージェント**: `@workspace /security-auditor`
 
 ```
 @security 実装完了したOneRoster API Hubの包括的なセキュリティ監査を実施してください。
@@ -932,7 +932,7 @@ async def get_org(
 
 ### ステップ5-2: パフォーマンステスト
 
-**使用エージェント**: `@performance`、`@test-engineer`
+**使用エージェント**: `@workspace /performance-optimizer`、`@workspace /test-engineer`
 
 ```
 @test-engineer パフォーマンステストを設計・実装してください。
@@ -975,7 +975,7 @@ async def get_org(
 
 ### ステップ5-3: バグ修正（新規）
 
-**使用エージェント**: `@bug-hunter`
+**使用エージェント**: `@workspace /bug-hunter`
 
 ```
 @bug-hunter 統合テストで検出されたバグを分析して修正案を提示してください。
@@ -1017,7 +1017,7 @@ Error: IntegrityError: foreign key constraint fails
 
 ### ステップ5-4: 品質評価（新規）
 
-**使用エージェント**: `@qa`
+**使用エージェント**: `@workspace /quality-assurance`
 
 ```
 @qa テスト完了後の品質評価を実施してください。
@@ -1051,7 +1051,7 @@ Error: IntegrityError: foreign key constraint fails
 
 ### ステップ5-5: ドキュメント整備
 
-**使用エージェント**: `@tech-writer`
+**使用エージェント**: `@workspace /technical-writer`
 
 ```
 @tech-writer OneRoster API Hub の包括的なドキュメントを作成してください。
@@ -1111,7 +1111,7 @@ Error: IntegrityError: foreign key constraint fails
 
 ### ステップ6-1: 本番環境デプロイ
 
-**使用エージェント**: `@devops`
+**使用エージェント**: `@workspace /devops-engineer`
 
 ```
 @devops 本番環境へのデプロイ手順を整備してください。
@@ -1153,7 +1153,7 @@ Error: IntegrityError: foreign key constraint fails
 
 ### ステップ6-2: 可観測性設定（更新）
 
-**使用エージェント**: `@observability`
+**使用エージェント**: `@workspace /observability-engineer`
 
 ```
 @observability OneRoster API Hubの可観測性戦略を設計してください。
@@ -1243,7 +1243,7 @@ Error: IntegrityError: foreign key constraint fails
 
 ### ステップ6-3: レトロスペクティブ（新規）
 
-**使用エージェント**: `@agile`
+**使用エージェント**: `@workspace /agile-coach`
 
 ```
 @agile プロジェクト完了後のレトロスペクティブを実施してください。
@@ -1300,27 +1300,27 @@ Error: IntegrityError: foreign key constraint fails
 
 | カテゴリ | ファイル | 作成エージェント |
 |---------|---------|---------------|
-| **要件** | `docs/requirements/requirements-specification.md` | `@requirements` |
-| | `docs/requirements/user-stories.md` | `@requirements` |
-| **プロジェクト計画** | `docs/project/project-plan.md` | `@pm` |
-| | `docs/project/wbs.md` | `@pm` |
-| | `docs/project/risk-register.md` | `@pm` |
-| **アーキテクチャ** | `docs/architecture/architecture-report.md` | `@architect` |
-| | `docs/architecture/c4-context.mmd` | `@architect` |
-| | `docs/architecture/adr/` | `@architect` |
-| **データベース** | `docs/database/schema-design-report.md` | `@db-schema` |
-| | `docs/database/er-diagram.mmd` | `@db-schema` |
-| | `docs/database/ddl/create-tables.sql` | `@db-schema` |
-| **API** | `docs/api/openapi.yaml` | `@api-design` |
-| | `docs/api/API_DESIGN.md` | `@api-design` |
-| **クラウド** | `docs/cloud/aws-architecture.md` | `@cloud` |
-| | `docs/cloud/cost-estimate.md` | `@cloud` |
-| **セキュリティ** | `security/security-audit-report.md` | `@security` |
-| **利用者向け** | `README.md` | `@tech-writer` |
-| | `docs/API.md` | `@tech-writer` |
-| | `docs/DEVELOPER_GUIDE.md` | `@tech-writer` |
-| | `docs/OPERATIONS_GUIDE.md` | `@tech-writer` |
-| | `docs/USER_GUIDE.md` | `@tech-writer` |
+| **要件** | `docs/requirements/requirements-specification.md` | `@workspace /requirements-analyst` |
+| | `docs/requirements/user-stories.md` | `@workspace /requirements-analyst` |
+| **プロジェクト計画** | `docs/project/project-plan.md` | `@workspace /project-manager` |
+| | `docs/project/wbs.md` | `@workspace /project-manager` |
+| | `docs/project/risk-register.md` | `@workspace /project-manager` |
+| **アーキテクチャ** | `docs/architecture/architecture-report.md` | `@workspace /system-architect` |
+| | `docs/architecture/c4-context.mmd` | `@workspace /system-architect` |
+| | `docs/architecture/adr/` | `@workspace /system-architect` |
+| **データベース** | `docs/database/schema-design-report.md` | `@workspace /database-schema-designer` |
+| | `docs/database/er-diagram.mmd` | `@workspace /database-schema-designer` |
+| | `docs/database/ddl/create-tables.sql` | `@workspace /database-schema-designer` |
+| **API** | `docs/api/openapi.yaml` | `@workspace /api-designer` |
+| | `docs/api/API_DESIGN.md` | `@workspace /api-designer` |
+| **クラウド** | `docs/cloud/aws-architecture.md` | `@workspace /cloud-architect` |
+| | `docs/cloud/cost-estimate.md` | `@workspace /cloud-architect` |
+| **セキュリティ** | `security/security-audit-report.md` | `@workspace /security-auditor` |
+| **利用者向け** | `README.md` | `@workspace /technical-writer` |
+| | `docs/API.md` | `@workspace /technical-writer` |
+| | `docs/DEVELOPER_GUIDE.md` | `@workspace /technical-writer` |
+| | `docs/OPERATIONS_GUIDE.md` | `@workspace /technical-writer` |
+| | `docs/USER_GUIDE.md` | `@workspace /technical-writer` |
 
 ### 🛠️ コード・設定
 
@@ -1329,14 +1329,14 @@ Error: IntegrityError: foreign key constraint fails
 | **アプリケーション** | `app/services/csv_importer.py` | 開発者 |
 | | `app/api/v1/endpoints/` | 開発者 |
 | | `app/schemas/oneroster.py` | 開発者 |
-| **テスト** | `tests/unit/` | `@test-engineer` |
-| | `tests/integration/` | `@test-engineer` |
-| | `tests/performance/locustfile.py` | `@test-engineer` |
-| **インフラ** | `Dockerfile` | `@devops` |
-| | `docker-compose.yml` | `@devops` |
-| | `k8s/` | `@devops` |
-| | `terraform/` | `@cloud`, `@devops` |
-| **CI/CD** | `.github/workflows/ci.yaml` | `@devops` |
+| **テスト** | `tests/unit/` | `@workspace /test-engineer` |
+| | `tests/integration/` | `@workspace /test-engineer` |
+| | `tests/performance/locustfile.py` | `@workspace /test-engineer` |
+| **インフラ** | `Dockerfile` | `@workspace /devops-engineer` |
+| | `docker-compose.yml` | `@workspace /devops-engineer` |
+| | `k8s/` | `@workspace /devops-engineer` |
+| | `terraform/` | `@workspace /cloud-architect`, `@workspace /devops-engineer` |
+| **CI/CD** | `.github/workflows/ci.yaml` | `@workspace /devops-engineer` |
 
 ---
 
@@ -1360,12 +1360,12 @@ pip-audit と Docker イメージスキャンを実行し、検出された脆�
 
 **新しいOneRosterエンティティ追加**:
 
-1. `@db-schema` でテーブル設計
-2. `@api-design` でAPIエンドポイント設計
-3. `@test-engineer` でテスト生成
-4. `@code-review` で実装レビュー
-5. `@security` でセキュリティチェック
-6. `@tech-writer` でドキュメント更新
+1. `@workspace /database-schema-designer` でテーブル設計
+2. `@workspace /api-designer` でAPIエンドポイント設計
+3. `@workspace /test-engineer` でテスト生成
+4. `@workspace /code-reviewer` で実装レビュー
+5. `@workspace /security-auditor` でセキュリティチェック
+6. `@workspace /technical-writer` でドキュメント更新
 
 ---
 
@@ -1386,8 +1386,8 @@ pip-audit と Docker イメージスキャンを実行し、検出された脆�
    - 各フェーズで適切なエージェントを使い分ける
 
 4. **複数エージェントの連携**
-   - `@architect` の出力を `@db-schema` に渡す
-   - `@api-design` の出力を `@test-engineer` に渡す
+   - `@workspace /system-architect` の出力を `@workspace /database-schema-designer` に渡す
+   - `@workspace /api-designer` の出力を `@workspace /test-engineer` に渡す
 
 5. **成果物の検証**
    - エージェント生成物は必ず人間がレビュー
@@ -1405,7 +1405,7 @@ A: より詳細な要件を提示してください。OneRoster仕様書への�
 
 **Q2: 複数エージェントの出力に矛盾がある**
 
-A: 最初に `@architect` でアーキテクチャ全体を確定させ、その出力を後続のエージェント（`@db-schema`, `@api-design`）に必ず参照させてください。
+A: 最初に `@workspace /system-architect` でアーキテクチャ全体を確定させ、その出力を後続のエージェント（`@workspace /database-schema-designer`, `@workspace /api-designer`）に必ず参照させてください。
 
 **Q3: 生成されたコードがそのまま動かない**
 

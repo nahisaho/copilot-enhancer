@@ -44,7 +44,7 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 2. **エージェント設定の配置**
 
-   すでに `.copilot/agents/` ディレクトリにエージェント定義が配置されています。
+   すでに `.github/agents/` ディレクトリにエージェント定義が配置されています。
 
 3. **GitHub Copilot の再起動**
 
@@ -58,25 +58,25 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 ## エージェント一覧
 
-| # | エージェント名 | スラッグ | 専門領域 | 主な用途 |
-|---|--------------|---------|---------|---------|
-| 1 | System Architect AI | `@architect` | アーキテクチャ設計 | C4モデル、ADR、技術選定 |
-| 2 | Database Schema Designer AI | `@db-schema` | DB設計 | ER図、DDL、マイグレーション |
-| 3 | Code Reviewer AI | `@code-review` | コードレビュー | 品質チェック、セキュリティスキャン |
-| 4 | Test Engineer AI | `@test-engineer` | テスト設計 | ユニット/統合/E2Eテスト生成 |
-| 5 | Bug Hunter AI | `@bug-hunter` | デバッグ | エラーログ分析、根本原因特定 |
-| 6 | Performance Optimizer AI | `@performance` | 最適化 | ボトルネック検出、計算量改善 |
-| 7 | Technical Writer AI | `@tech-writer` | ドキュメント作成 | API仕様書、README、ガイド |
-| 8 | Requirements Analyst AI | `@requirements` | 要件分析 | ユーザーストーリー、仕様策定 |
-| 9 | UI/UX Designer AI | `@uiux` | UI/UX設計 | ワイヤーフレーム、デザインシステム |
-| 10 | DevOps Engineer AI | `@devops` | DevOps | CI/CD、Docker、K8s、IaC |
-| 11 | Cloud Architect AI | `@cloud` | クラウド設計 | AWS/Azure/GCP、コスト最適化 |
-| 12 | Observability Engineer AI | `@observability` | 可観測性 | ログ・メトリクス・トレース、SLI/SLO |
-| 13 | API Designer AI | `@api-design` | API設計 | REST/GraphQL、OpenAPI仕様 |
-| 14 | Security Auditor AI | `@security` | セキュリティ | 脆弱性診断、OWASP対応 |
-| 15 | Project Manager AI | `@pm` | プロジェクト管理 | WBS、リスク管理、工数見積もり |
-| 16 | Agile Coach AI | `@agile` | アジャイル | スプリント計画、レトロスペクティブ |
-| 17 | Quality Assurance AI | `@qa` | 品質保証 | テスト戦略、品質メトリクス |
+| # | エージェント名 | 呼び出しコマンド | 専門領域 | 主な用途 |
+|---|--------------|----------------|---------|---------|
+| 1 | System Architect AI | `@workspace /system-architect` | アーキテクチャ設計 | C4モデル、ADR、技術選定 |
+| 2 | Database Schema Designer AI | `@workspace /database-schema-designer` | DB設計 | ER図、DDL、マイグレーション |
+| 3 | Code Reviewer AI | `@workspace /code-reviewer` | コードレビュー | 品質チェック、セキュリティスキャン |
+| 4 | Test Engineer AI | `@workspace /test-engineer` | テスト設計 | ユニット/統合/E2Eテスト生成 |
+| 5 | Bug Hunter AI | `@workspace /bug-hunter` | デバッグ | エラーログ分析、根本原因特定 |
+| 6 | Performance Optimizer AI | `@workspace /performance-optimizer` | 最適化 | ボトルネック検出、計算量改善 |
+| 7 | Technical Writer AI | `@workspace /technical-writer` | ドキュメント作成 | API仕様書、README、ガイド |
+| 8 | Requirements Analyst AI | `@workspace /requirements-analyst` | 要件分析 | ユーザーストーリー、仕様策定 |
+| 9 | UI/UX Designer AI | `@workspace /uiux-designer` | UI/UX設計 | ワイヤーフレーム、デザインシステム |
+| 10 | DevOps Engineer AI | `@workspace /devops-engineer` | DevOps | CI/CD、Docker、K8s、IaC |
+| 11 | Cloud Architect AI | `@workspace /cloud-architect` | クラウド設計 | AWS/Azure/GCP、コスト最適化 |
+| 12 | Observability Engineer AI | `@workspace /observability-engineer` | 可観測性 | ログ・メトリクス・トレース、SLI/SLO |
+| 13 | API Designer AI | `@workspace /api-designer` | API設計 | REST/GraphQL、OpenAPI仕様 |
+| 14 | Security Auditor AI | `@workspace /security-auditor` | セキュリティ | 脆弱性診断、OWASP対応 |
+| 15 | Project Manager AI | `@workspace /project-manager` | プロジェクト管理 | WBS、リスク管理、工数見積もり |
+| 16 | Agile Coach AI | `@workspace /agile-coach` | アジャイル | スプリント計画、レトロスペクティブ |
+| 17 | Quality Assurance AI | `@workspace /quality-assurance` | 品質保証 | テスト戦略、品質メトリクス |
 
 ---
 
@@ -86,10 +86,11 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 1. **エージェントの呼び出し**
 
-   GitHub Copilot のチャット画面で `@` に続けてエージェントのスラッグを入力します。
+   GitHub Copilot のチャット画面で `@workspace /` に続けてエージェント名を入力します。
 
    ```
-   @code-review このファイルをレビューしてください
+   @workspace /code-reviewer
+   このファイルをレビューしてください
    ```
 
 2. **スラッシュコマンドの使用**
@@ -110,29 +111,29 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 | やりたいこと | 推奨エージェント |
 |------------|---------------|
-| アーキテクチャ全体を設計したい | `@architect` |
-| データベーススキーマを設計したい | `@db-schema` |
-| コードをレビューしてほしい | `@code-review` |
-| テストコードを生成したい | `@test-engineer` |
-| バグを解析・修正したい | `@bug-hunter` |
-| パフォーマンスを最適化したい | `@performance` |
-| APIドキュメントを作成したい | `@tech-writer` |
-| 要件を整理したい | `@requirements` |
-| UI/UXを設計したい | `@uiux` |
-| CI/CDパイプラインを構築したい | `@devops` |
-| クラウドインフラを設計したい | `@cloud` |
-| 監視・ログ基盤を構築したい | `@observability` |
-| REST APIを設計したい | `@api-design` |
-| セキュリティ診断をしたい | `@security` |
-| プロジェクト計画を立てたい | `@pm` |
-| スプリント計画を立てたい | `@agile` |
-| テスト戦略を策定したい | `@qa` |
+| アーキテクチャ全体を設計したい | `@workspace /system-architect` |
+| データベーススキーマを設計したい | `@workspace /database-schema-designer` |
+| コードをレビューしてほしい | `@workspace /code-reviewer` |
+| テストコードを生成したい | `@workspace /test-engineer` |
+| バグを解析・修正したい | `@workspace /bug-hunter` |
+| パフォーマンスを最適化したい | `@workspace /performance-optimizer` |
+| APIドキュメントを作成したい | `@workspace /technical-writer` |
+| 要件を整理したい | `@workspace /requirements-analyst` |
+| UI/UXを設計したい | `@workspace /uiux-designer` |
+| CI/CDパイプラインを構築したい | `@workspace /devops-engineer` |
+| クラウドインフラを設計したい | `@workspace /cloud-architect` |
+| 監視・ログ基盤を構築したい | `@workspace /observability-engineer` |
+| REST APIを設計したい | `@workspace /api-designer` |
+| セキュリティ診断をしたい | `@workspace /security-auditor` |
+| プロジェクト計画を立てたい | `@workspace /project-manager` |
+| スプリント計画を立てたい | `@workspace /agile-coach` |
+| テスト戦略を策定したい | `@workspace /quality-assurance` |
 
 ---
 
 ## 各エージェントの詳細
 
-### 1. System Architect AI (`@architect`)
+### 1. System Architect AI (`@workspace /system-architect`)
 
 **専門領域**: システムアーキテクチャ設計
 
@@ -150,14 +151,15 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 **使用例**:
 ```
-@architect 新規ECサイトのアーキテクチャを設計してください。
+@workspace /system-architect
+新規ECサイトのアーキテクチャを設計してください。
 主要機能: ユーザー管理、商品管理、注文処理、決済連携
 非機能要件: 可用性99.9%、ピーク時1000req/sec
 ```
 
 ---
 
-### 2. Database Schema Designer AI (`@db-schema`)
+### 2. Database Schema Designer AI (`@workspace /database-schema-designer`)
 
 **専門領域**: データベーススキーマ設計
 
@@ -177,14 +179,15 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 **使用例**:
 ```
-@db-schema ブログシステムのデータベーススキーマを設計してください。
+@workspace /database-schema-designer
+ブログシステムのデータベーススキーマを設計してください。
 エンティティ: ユーザー、投稿、コメント、タグ
 要件: 投稿の全文検索、タグによる絞り込み、1億件以上のスケーラビリティ
 ```
 
 ---
 
-### 3. Code Reviewer AI (`@code-review`)
+### 3. Code Reviewer AI (`@workspace /code-reviewer`)
 
 **専門領域**: コードレビュー・品質チェック
 
@@ -204,7 +207,8 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 **使用例**:
 ```
-@code-review このPythonファイルをレビューしてください。
+@workspace /code-reviewer
+このPythonファイルをレビューしてください。
 特にセキュリティとパフォーマンスを重点的にチェックしてください。
 
 [コードを貼り付け]
@@ -212,7 +216,7 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 ---
 
-### 4. Test Engineer AI (`@test-engineer`)
+### 4. Test Engineer AI (`@workspace /test-engineer`)
 
 **専門領域**: テスト設計・自動テスト生成
 
@@ -233,7 +237,8 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 
 **使用例**:
 ```
-@test-engineer この関数のユニットテストを生成してください（pytest使用）。
+@workspace /test-engineer
+この関数のユニットテストを生成してください（pytest使用）。
 境界値とエッジケースを網羅してください。
 
 def calculate_discount(purchase_amount, is_member):
@@ -248,7 +253,7 @@ def calculate_discount(purchase_amount, is_member):
 
 ---
 
-### 5. Technical Writer AI (`@tech-writer`)
+### 5. Technical Writer AI (`@workspace /technical-writer`)
 
 **専門領域**: 技術文書作成
 
@@ -267,7 +272,8 @@ def calculate_discount(purchase_amount, is_member):
 
 **使用例**:
 ```
-@tech-writer このプロジェクトのREADMEを作成してください。
+@workspace /technical-writer
+このプロジェクトのREADMEを作成してください。
 プロジェクト名: Task Manager API
 技術スタック: Python 3.11, FastAPI, PostgreSQL, Docker
 主な機能: タスクCRUD、ユーザー認証、タスクの共有
@@ -275,7 +281,7 @@ def calculate_discount(purchase_amount, is_member):
 
 ---
 
-### 6. DevOps Engineer AI (`@devops`)
+### 6. DevOps Engineer AI (`@workspace /devops-engineer`)
 
 **専門領域**: CI/CD・インフラ自動化
 
@@ -294,7 +300,8 @@ def calculate_discount(purchase_amount, is_member):
 
 **使用例**:
 ```
-@devops GitHub Actionsで以下のCI/CDパイプラインを構築してください。
+@workspace /devops-engineer
+GitHub Actionsで以下のCI/CDパイプラインを構築してください。
 1. プルリクエスト時: Lint、ユニットテスト、セキュリティスキャン
 2. mainブランチマージ時: Docker イメージビルド、ECRプッシュ、ECS デプロイ
 言語: Python 3.11
@@ -303,7 +310,7 @@ def calculate_discount(purchase_amount, is_member):
 
 ---
 
-### 7. API Designer AI (`@api-design`)
+### 7. API Designer AI (`@workspace /api-designer`)
 
 **専門領域**: API設計
 
@@ -321,7 +328,8 @@ def calculate_discount(purchase_amount, is_member):
 
 **使用例**:
 ```
-@api-design 以下のリソースでRESTful APIを設計してください。
+@workspace /api-designer
+以下のリソースでRESTful APIを設計してください。
 リソース: ユーザー、タスク、プロジェクト
 要件:
 - JWT認証
@@ -333,7 +341,7 @@ OpenAPI仕様書も生成してください。
 
 ---
 
-### 8. Security Auditor AI (`@security`)
+### 8. Security Auditor AI (`@workspace /security-auditor`)
 
 **専門領域**: セキュリティ監査・脆弱性診断
 
@@ -352,7 +360,8 @@ OpenAPI仕様書も生成してください。
 
 **使用例**:
 ```
-@security このログイン処理のセキュリティをチェックしてください。
+@workspace /security-auditor
+このログイン処理のセキュリティをチェックしてください。
 OWASP Top 10に基づいて脆弱性を指摘してください。
 
 [コードを貼り付け]
@@ -360,7 +369,7 @@ OWASP Top 10に基づいて脆弱性を指摘してください。
 
 ---
 
-### 9. Requirements Analyst AI (`@requirements`)
+### 9. Requirements Analyst AI (`@workspace /requirements-analyst`)
 
 **専門領域**: 要件分析・仕様策定
 
@@ -378,7 +387,8 @@ OWASP Top 10に基づいて脆弱性を指摘してください。
 
 **使用例**:
 ```
-@requirements 以下の機能のユーザーストーリーを作成してください。
+@workspace /requirements-analyst
+以下の機能のユーザーストーリーを作成してください。
 機能: タスクの優先度変更
 ユーザー: プロジェクトマネージャー
 目的: タスクの重要度に応じて作業順序を調整する
@@ -387,7 +397,7 @@ OWASP Top 10に基づいて脆弱性を指摘してください。
 
 ---
 
-### 10. Cloud Architect AI (`@cloud`)
+### 10. Cloud Architect AI (`@workspace /cloud-architect`)
 
 **専門領域**: クラウドアーキテクチャ設計
 
@@ -406,7 +416,8 @@ OWASP Top 10に基づいて脆弱性を指摘してください。
 
 **使用例**:
 ```
-@cloud AWSで高可用性なWebアプリケーションインフラを設計してください。
+@workspace /cloud-architect
+AWSで高可用性なWebアプリケーションインフラを設計してください。
 要件:
 - 可用性: 99.9%
 - トラフィック: ピーク時5000req/sec
@@ -417,7 +428,7 @@ Terraformコードも生成してください。
 
 ---
 
-### 11. Project Manager AI (`@pm`)
+### 11. Project Manager AI (`@workspace /project-manager`)
 
 **専門領域**: プロジェクト管理
 
@@ -436,7 +447,8 @@ Terraformコードも生成してください。
 
 **使用例**:
 ```
-@pm 以下のプロジェクトのWBSを作成してください。
+@workspace /project-manager
+以下のプロジェクトのWBSを作成してください。
 プロジェクト: ECサイトリニューアル
 期間: 3ヶ月
 チーム: フロントエンド2名、バックエンド2名、デザイナー1名
@@ -445,7 +457,7 @@ Terraformコードも生成してください。
 
 ---
 
-### 12. Bug Hunter AI (`@bug-hunter`)
+### 12. Bug Hunter AI (`@workspace /bug-hunter`)
 
 **専門領域**: バグ分析・デバッグ支援
 
@@ -465,7 +477,8 @@ Terraformコードも生成してください。
 
 **使用例**:
 ```
-@bug-hunter 以下のエラーを分析して根本原因を特定してください。
+@workspace /bug-hunter
+以下のエラーを分析して根本原因を特定してください。
 
 Error: TypeError: Cannot read property 'map' of undefined
     at UserList.render (UserList.jsx:42)
@@ -474,7 +487,7 @@ Error: TypeError: Cannot read property 'map' of undefined
 
 ---
 
-### 13. Performance Optimizer AI (`@performance`)
+### 13. Performance Optimizer AI (`@workspace /performance-optimizer`)
 
 **専門領域**: パフォーマンス分析・最適化
 
@@ -494,7 +507,8 @@ Error: TypeError: Cannot read property 'map' of undefined
 
 **使用例**:
 ```
-@performance このループ処理を最適化してください。現在10秒かかっています。
+@workspace /performance-optimizer
+このループ処理を最適化してください。現在10秒かかっています。
 
 for user in users:
     orders = db.query(Order).filter_by(user_id=user.id).all()
@@ -504,7 +518,7 @@ for user in users:
 
 ---
 
-### 14. UI/UX Designer AI (`@uiux`)
+### 14. UI/UX Designer AI (`@workspace /uiux-designer`)
 
 **専門領域**: UI/UX設計
 
@@ -524,14 +538,15 @@ for user in users:
 
 **使用例**:
 ```
-@uiux タスク管理アプリのタスク一覧画面のワイヤーフレームを作成してください。
+@workspace /uiux-designer
+タスク管理アプリのタスク一覧画面のワイヤーフレームを作成してください。
 機能: タスクの絞り込み、ソート、ステータス変更、優先度表示
 ターゲット: ビジネスユーザー、モバイル対応必須
 ```
 
 ---
 
-### 15. Observability Engineer AI (`@observability`)
+### 15. Observability Engineer AI (`@workspace /observability-engineer`)
 
 **専門領域**: 可観測性設計
 
@@ -552,7 +567,8 @@ for user in users:
 
 **使用例**:
 ```
-@observability Webアプリケーションの可観測性戦略を設計してください。
+@workspace /observability-engineer
+Webアプリケーションの可観測性戦略を設計してください。
 要件:
 - サービス: FastAPI（Python）、PostgreSQL、Redis
 - 目標: SLO 99.9%、p95レイテンシ < 200ms
@@ -561,7 +577,7 @@ for user in users:
 
 ---
 
-### 16. Agile Coach AI (`@agile`)
+### 16. Agile Coach AI (`@workspace /agile-coach`)
 
 **専門領域**: アジャイル・スクラム支援
 
@@ -582,7 +598,8 @@ for user in users:
 
 **使用例**:
 ```
-@agile スプリント3のレトロスペクティブを実施します。
+@workspace /agile-coach
+スプリント3のレトロスペクティブを実施します。
 Keep（続けること）:
 - ペアプログラミングで品質向上
 - デイリースタンドアップが効率的
@@ -596,7 +613,7 @@ Try（試すこと）の提案をお願いします。
 
 ---
 
-### 17. Quality Assurance AI (`@qa`)
+### 17. Quality Assurance AI (`@workspace /quality-assurance`)
 
 **専門領域**: 品質保証・テスト戦略
 
@@ -616,7 +633,8 @@ Try（試すこと）の提案をお願いします。
 
 **使用例**:
 ```
-@qa 新規プロジェクトのテスト戦略を立案してください。
+@workspace /quality-assurance
+新規プロジェクトのテスト戦略を立案してください。
 プロジェクト: ECサイトリニューアル
 技術スタック: React + TypeScript、Node.js、PostgreSQL
 チーム: 開発5名、QA2名
@@ -631,38 +649,44 @@ Try（試すこと）の提案をお願いします。
 
 **ステップ1: 要件分析**
 ```
-@requirements 以下のアプリケーションの要件を整理してください。
+@workspace /requirements-analyst
+以下のアプリケーションの要件を整理してください。
 アプリケーション: タスク管理ツール
 主な機能: タスクCRUD、プロジェクト管理、チーム共有、通知機能
 ```
 
 **ステップ2: アーキテクチャ設計**
 ```
-@architect 上記要件に基づいてアーキテクチャを設計してください。
+@workspace /system-architect
+上記要件に基づいてアーキテクチャを設計してください。
 C4モデルで可視化し、技術選定の理由も説明してください。
 ```
 
 **ステップ3: データベース設計**
 ```
-@db-schema アーキテクチャに基づいてデータベーススキーマを設計してください。
+@workspace /database-schema-designer
+アーキテクチャに基づいてデータベーススキーマを設計してください。
 ER図とDDLを生成してください。
 ```
 
 **ステップ4: API設計**
 ```
-@api-design RESTful APIを設計してください。
+@workspace /api-designer
+RESTful APIを設計してください。
 OpenAPI仕様書を生成してください。
 ```
 
 **ステップ5: CI/CD構築**
 ```
-@devops GitHub ActionsでCI/CDパイプラインを構築してください。
+@workspace /devops-engineer
+GitHub ActionsでCI/CDパイプラインを構築してください。
 テスト、ビルド、デプロイを自動化してください。
 ```
 
 **ステップ6: テスト戦略**
 ```
-@test-engineer 包括的なテスト戦略を立ててください。
+@workspace /test-engineer
+包括的なテスト戦略を立ててください。
 ユニット/統合/E2Eテストのカバレッジ目標も提示してください。
 ```
 
@@ -672,23 +696,27 @@ OpenAPI仕様書を生成してください。
 
 **ステップ1: コードレビュー**
 ```
-@code-review このモジュールをレビューしてください。
+@workspace /code-reviewer
+このモジュールをレビューしてください。
 品質問題とセキュリティリスクを特定してください。
 ```
 
 **ステップ2: セキュリティ監査**
 ```
-@security OWASP Top 10に基づいて詳細な脆弱性診断を実施してください。
+@workspace /security-auditor
+OWASP Top 10に基づいて詳細な脆弱性診断を実施してください。
 ```
 
 **ステップ3: パフォーマンス改善**
 ```
-@code-review /performance パフォーマンスボトルネックを検出して最適化案を提示してください。
+@workspace /code-reviewer
+/performance パフォーマンスボトルネックを検出して最適化案を提示してください。
 ```
 
 **ステップ4: テストカバレッジ向上**
 ```
-@test-engineer /coverage 現在のカバレッジを分析して、不足しているテストを生成してください。
+@workspace /test-engineer
+/coverage 現在のカバレッジを分析して、不足しているテストを生成してください。
 ```
 
 ---
@@ -697,25 +725,29 @@ OpenAPI仕様書を生成してください。
 
 **ステップ1: プロジェクト計画**
 ```
-@pm オンプレミスからAWSへの移行プロジェクト計画を立ててください。
+@workspace /project-manager
+オンプレミスからAWSへの移行プロジェクト計画を立ててください。
 期間: 6ヶ月、現行システム: 仮想マシン10台、データベース3台
 ```
 
 **ステップ2: クラウドアーキテクチャ設計**
 ```
-@cloud AWSでの移行先アーキテクチャを設計してください。
+@workspace /cloud-architect
+AWSでの移行先アーキテクチャを設計してください。
 Well-Architected Frameworkに準拠し、コスト見積もりも提示してください。
 ```
 
 **ステップ3: 移行戦略**
 ```
-@cloud ゼロダウンタイムでの移行戦略を提案してください。
+@workspace /cloud-architect
+ゼロダウンタイムでの移行戦略を提案してください。
 段階的移行のロードマップを作成してください。
 ```
 
 **ステップ4: IaC化**
 ```
-@devops Terraformで全リソースをコード化してください。
+@workspace /devops-engineer
+Terraformで全リソースをコード化してください。
 dev/staging/prod環境を分離してください。
 ```
 
@@ -729,8 +761,8 @@ dev/staging/prod環境を分離してください。
 
 **解決策**:
 1. エディタを再起動
-2. `.copilot/agents/` ディレクトリが正しい場所にあるか確認
-3. YAMLファイルの構文エラーをチェック
+2. `.github/agents/` ディレクトリが正しい場所にあるか確認
+3. Markdownファイル（`.md`）のYAMLフロントマターの構文エラーをチェック
 
 ### エージェントの応答が期待と異なる
 
@@ -758,7 +790,7 @@ dev/staging/prod環境を分離してください。
 
 ### Q1: 複数のエージェントを組み合わせて使えますか？
 
-**A**: はい、推奨されます。例えば、`@architect`でアーキテクチャ設計後、`@db-schema`でデータベース設計、`@api-design`でAPI設計と段階的に進めることができます。
+**A**: はい、推奨されます。例えば、`@workspace /system-architect`でアーキテクチャ設計後、`@workspace /database-schema-designer`でデータベース設計、`@workspace /api-designer`でAPI設計と段階的に進めることができます。
 
 ### Q2: 生成されたコードはそのまま使えますか？
 
@@ -766,7 +798,7 @@ dev/staging/prod環境を分離してください。
 
 ### Q3: エージェントをカスタマイズできますか？
 
-**A**: はい、`.copilot/agents/` 内のYAMLファイルと `prompts/` 内のMarkdownファイルを編集することでカスタマイズできます。
+**A**: はい、`.github/agents/` 内のMarkdownファイル（`.md`）を編集することでカスタマイズできます。各ファイルにはYAMLフロントマターとプロンプトが統合されています。
 
 ### Q4: 日本語と英語、どちらで質問すべきですか？
 

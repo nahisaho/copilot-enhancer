@@ -1,3 +1,8 @@
+---
+name: "Security Auditor AI"
+description: "セキュリティ監査・脆弱性診断・OWASP対応・セキュアコーディング支援を行うCopilotエージェント"
+---
+
 # Security Auditor AI (Copilot版)
 
 ## 1. 役割定義

@@ -1,67 +1,69 @@
 # Copilot Enhancer
 
-ソフトウェア開発を加速する17個の専門AIエージェント
+ソフトウェア開発を加速する18個の専門AIエージェント
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Compatible-blue)](https://github.com/features/copilot)
+[![Official Spec](https://img.shields.io/badge/Copilot-Official%20Spec-green)](https://docs.github.com/en/copilot/reference/custom-agents-configuration)
 
 ## 🚀 概要
 
-Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージェントを提供します。各エージェントはソフトウェア開発の特定領域に特化し、高品質な成果物を自動生成します。
+Copilot Enhancerは、**GitHub Copilot公式仕様に準拠**した18個の専門AIエージェントを提供します。各エージェントはソフトウェア開発の特定領域に特化し、高品質な成果物を自動生成します。
 
 ### ✨ 特徴
 
 - **🎯 専門性**: 各エージェントが特定領域に特化（アーキテクチャ、DB設計、テスト、セキュリティなど）
 - **📊 高品質**: 実務で即使える成果物を生成（ドキュメント、コード、設定ファイル）
-- **🔧 実用的**: 実際のプロジェクトで使用可能なテンプレートとベストプラクティス
+- **💬 対話型**: 1問1答形式で段階的に情報を収集し、最適な成果物を生成
+- **🔧 実用的**: 実際のプロジェクトで使用可能なベストプラクティス
 - **🌐 日本語対応**: 全エージェントが日本語でのやり取りに対応
-- **🔄 拡張可能**: 新しいエージェントの追加が容易
+- **✅ 公式準拠**: GitHub Copilot公式仕様に完全準拠
 
-## 📋 エージェント一覧
+## 📋 エージェント一覧（18個）
 
 ### 🎭 統括エージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 0 | **Orchestrator AI** | `@orchestrator` | 全エージェント統括・ワークフロー調整 |
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 1 | **Orchestrator AI** | 全エージェント統括・ワークフロー調整 |
 
-**Orchestrator AI**は、16個の専門エージェントを自動的に選択・実行し、複雑なワークフローを管理します。プロジェクト全体の自動化に最適です。
+**Orchestrator AI**は、17個の専門エージェントを自動的に選択・実行し、複雑なワークフローを管理します。プロジェクト全体の自動化に最適です。
 
-### コア開発エージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 1 | **System Architect AI** | `@architect` | システムアーキテクチャ設計 |
-| 2 | **Database Schema Designer AI** | `@db-schema` | データベーススキーマ設計 |
-| 3 | **Code Reviewer AI** | `@code-review` | コードレビュー・品質チェック |
-| 4 | **Test Engineer AI** | `@test-engineer` | テスト設計・自動生成 |
-| 5 | **Bug Hunter AI** | `@bug-hunter` | バグ分析・デバッグ支援 |
-| 6 | **Performance Optimizer AI** | `@performance` | パフォーマンス分析・最適化 |
+### 🏗️ 設計・アーキテクチャ
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 2 | **Requirements Analyst AI** | 要件分析・ユーザーストーリー作成 |
+| 3 | **System Architect AI** | システムアーキテクチャ設計・ADR |
+| 4 | **Database Schema Designer AI** | データベーススキーマ設計・ER図 |
+| 5 | **API Designer AI** | REST/GraphQL API設計 |
+| 6 | **UI/UX Designer AI** | UI/UX設計・ワイヤーフレーム |
+| 7 | **Cloud Architect AI** | クラウドアーキテクチャ設計 |
 
-### ドキュメント・仕様エージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 7 | **Technical Writer AI** | `@tech-writer` | 技術文書作成 |
-| 8 | **Requirements Analyst AI** | `@requirements` | 要件分析・仕様策定 |
-| 9 | **UI/UX Designer AI** | `@uiux` | UI/UX設計・ワイヤーフレーム |
+### 💻 開発・実装
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 8 | **Code Reviewer AI** | コードレビュー・品質チェック |
+| 9 | **Bug Hunter AI** | バグ分析・デバッグ支援 |
+| 10 | **Performance Optimizer AI** | パフォーマンス分析・最適化 |
 
-### DevOps・インフラエージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 10 | **DevOps Engineer AI** | `@devops` | CI/CD・インフラ自動化 |
-| 11 | **Cloud Architect AI** | `@cloud` | クラウドアーキテクチャ設計 |
-| 12 | **Observability Engineer AI** | `@observability` | 監視・ログ・メトリクス設計 |
+### 🧪 品質保証
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 11 | **Test Engineer AI** | テスト設計・自動生成 |
+| 12 | **Quality Assurance AI** | 品質保証・テスト戦略 |
+| 13 | **Security Auditor AI** | セキュリティ監査・脆弱性診断 |
 
-### API・セキュリティエージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 13 | **API Designer AI** | `@api-design` | API設計・仕様書生成 |
-| 14 | **Security Auditor AI** | `@security` | セキュリティ監査・脆弱性診断 |
+### 🚀 運用・DevOps
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 14 | **DevOps Engineer AI** | CI/CD・インフラ自動化 |
+| 15 | **Observability Engineer AI** | 監視・ログ・メトリクス設計 |
 
-### プロジェクト管理・品質エージェント
-| # | エージェント | スラッグ | 専門領域 |
-|---|-----------|---------|---------|
-| 15 | **Project Manager AI** | `@pm` | プロジェクト管理・計画 |
-| 16 | **Agile Coach AI** | `@agile` | スクラム・アジャイル支援 |
-| 17 | **Quality Assurance AI** | `@qa` | 品質保証・テスト戦略 |
+### 📝 マネジメント・ドキュメント
+| # | エージェント | 専門領域 |
+|---|-----------|---------|
+| 16 | **Project Manager AI** | プロジェクト管理・計画 |
+| 17 | **Agile Coach AI** | スクラム・アジャイル支援 |
+| 18 | **Technical Writer AI** | 技術文書作成・ドキュメント |
 
 ## 🎬 クイックスタート
 
@@ -73,29 +75,37 @@ Copilot Enhancerは、GitHub Copilot内で動作する17個の専門AIエージ�
 ### インストール
 
 ```bash
-# リポジトリをクローン
+# 1. リポジトリをクローンまたはダウンロード
 git clone https://github.com/your-username/copilot-enhancer.git
+
+# 2. プロジェクトのルートディレクトリに移動
 cd copilot-enhancer
 
-# エディタを再起動してエージェントを有効化
+# 3. .github/agents/ ディレクトリが存在することを確認
+ls .github/agents/
+
+# 4. エディタを再起動してエージェントを有効化
 ```
 
 ### 基本的な使い方
 
 #### 単一エージェントの利用
 
-GitHub Copilot のチャット画面で `@` に続けてエージェント名を入力:
+GitHub Copilot のチャット画面で `@workspace /` に続けてエージェント名を入力:
 
 ```
-@architect 新規Webアプリケーションのアーキテクチャを設計してください
-```
-
-```
-@db-schema ブログシステムのデータベーススキーマを設計してください
+@workspace /system-architect
+新規Webアプリケーションのアーキテクチャを設計してください
 ```
 
 ```
-@code-review このファイルをレビューしてください
+@workspace /database-schema-designer
+ブログシステムのデータベーススキーマを設計してください
+```
+
+```
+@workspace /code-reviewer
+このファイルをレビューしてください
 ```
 
 #### Orchestratorによる自動化（推奨）
@@ -103,29 +113,57 @@ GitHub Copilot のチャット画面で `@` に続けてエージェント名を
 複雑なプロジェクトや複数エージェントが必要な場合は、Orchestratorに任せることで自動的に最適なワークフローが実行されます：
 
 ```
-@orchestrator ECサイトを開発したい。要件定義からデプロイまで全て対応してください
+@workspace /orchestrator
+ECサイトを開発したい。要件定義からデプロイまで全て対応してください
 ```
 
 ```
-@orchestrator 既存システムの品質を改善したい。セキュリティ、パフォーマンス、コード品質を診断してください
+@workspace /orchestrator
+既存システムの品質を改善したい。セキュリティ、パフォーマンス、コード品質を診断してください
 ```
 
 ```
-@orchestrator APIを設計してドキュメントも作成してください
+@workspace /orchestrator
+APIを設計してドキュメントも作成してください
 ```
 
-## 📖 ドキュメント
+## 💬 対話型エージェント
 
-- **[利用者ガイド](docs/USER_GUIDE.md)** - 詳細な使い方とサンプル
-- **[エージェントレジストリ](docs/AGENT_REGISTRY.md)** - 全エージェントの詳細仕様と選択ガイド
-- **[エージェント開発ロードマップ](docs/agent-roadmap.md)** - 全27エージェントの計画
+全てのエージェントは**対話型実行**を採用しています：
+
+### 対話フロー（5フェーズ）
+
+1. **初回ヒアリング**: 基本情報を質問（プロジェクト概要、技術スタックなど）
+2. **詳細ヒアリング**: 専門的な要件を深掘り（セキュリティ、パフォーマンスなど）
+3. **確認フェーズ**: 収集した情報を要約して最終確認
+4. **成果物生成**: ヒアリング内容に基づいて成果物を作成
+5. **フィードバック**: 生成した成果物へのフィードバックを受け付け
+
+### 対話例
+
+```
+👤 ユーザー: @workspace /database-schema-designer
+データベースを設計してください
+
+🤖 エージェント:
+[フェーズ1] 質問 1/6: プロジェクト概要
+
+まず、データベース設計の対象となるシステムについて教えてください。
+
+どのようなシステムのデータベースを設計しますか？
+a) ECサイト
+b) SNS/コミュニティサイト
+c) 業務管理システム
+d) その他（具体的に教えてください）
+```
 
 ## 🎯 使用例
 
 ### シナリオ1: 新規プロジェクトの立ち上げ（Orchestrator使用）
 
 ```
-@orchestrator 新規ECサイトを開発します。
+@workspace /orchestrator
+新規ECサイトを開発します。
 以下の機能が必要です：
 - ユーザー登録・ログイン
 - 商品検索・カート機能
@@ -138,115 +176,139 @@ GitHub Copilot のチャット画面で `@` に続けてエージェント名を
 **Orchestratorが自動実行する内容**:
 1. Requirements Analyst: 機能要件・非機能要件定義
 2. 並列実行: Database Schema Designer（DB設計） + API Designer（API設計） + UI/UX Designer（UI設計）
-3. DevOps Engineer: CI/CD構築
-4. Test Engineer: テストコード生成
-5. Security Auditor: セキュリティ監査
-6. Technical Writer: ドキュメント作成
+3. System Architect: 全体アーキテクチャ統合
+4. DevOps Engineer: CI/CD構築
+5. Test Engineer: テストコード生成
+6. Security Auditor: セキュリティ監査
+7. Technical Writer: ドキュメント作成
 
-### シナリオ1-B: 手動で各エージェント実行（カスタマイズしたい場合）
+### シナリオ2: 手動で各エージェント実行（カスタマイズしたい場合）
 
 ```
 # ステップ1: 要件分析
-@requirements プロジェクトの要件を整理してユーザーストーリーを作成してください
+@workspace /requirements-analyst
+プロジェクトの要件を整理してユーザーストーリーを作成してください
 
 # ステップ2: アーキテクチャ設計
-@architect C4モデルでアーキテクチャを設計してください
+@workspace /system-architect
+C4モデルでアーキテクチャを設計してください
 
 # ステップ3: データベース設計
-@db-schema ER図とDDLを生成してください
+@workspace /database-schema-designer
+ER図とDDLを生成してください
 
 # ステップ4: API設計
-@api-design RESTful APIとOpenAPI仕様書を作成してください
+@workspace /api-designer
+RESTful APIとOpenAPI仕様書を作成してください
 
 # ステップ5: CI/CD構築
-@devops GitHub ActionsでCI/CDパイプラインを構築してください
+@workspace /devops-engineer
+GitHub ActionsでCI/CDパイプラインを構築してください
 ```
 
-### シナリオ2: コード品質向上
+### シナリオ3: コード品質向上
 
 ```
 # セキュリティチェック
-@security OWASP Top 10に基づいて脆弱性をチェックしてください
+@workspace /security-auditor
+OWASP Top 10に基づいて脆弱性をチェックしてください
 
 # コードレビュー
-@code-review 品質とパフォーマンスを重点的にレビューしてください
+@workspace /code-reviewer
+品質とパフォーマンスを重点的にレビューしてください
 
 # テスト生成
-@test-engineer ユニットテストを生成してカバレッジを80%以上にしてください
+@workspace /test-engineer
+ユニットテストを生成してカバレッジを80%以上にしてください
 ```
 
-### シナリオ3: ドキュメント整備
+### シナリオ4: ドキュメント整備
 
 ```
 # README作成
-@tech-writer プロジェクトのREADMEを作成してください
+@workspace /technical-writer
+プロジェクトのREADMEを作成してください
 
 # API仕様書生成
-@api-design OpenAPI仕様書を生成してください
+@workspace /api-designer
+OpenAPI仕様書を生成してください
 
 # セットアップガイド
-@tech-writer 開発環境のセットアップガイドを作成してください
+@workspace /technical-writer
+開発環境のセットアップガイドを作成してください
 ```
 
 ## 🏗️ プロジェクト構造
 
 ```
 copilot-enhancer/
-├── .copilot/
-│   └── agents/              # エージェント定義（17個）
-│       ├── system-architect-ai.yaml
-│       ├── database-schema-designer.yaml
-│       ├── code-reviewer.yaml
-│       ├── test-engineer.yaml
-│       ├── bug-hunter.yaml
-│       ├── performance-optimizer.yaml
-│       ├── technical-writer.yaml
-│       ├── requirements-analyst.yaml
-│       ├── uiux-designer.yaml
-│       ├── devops-engineer.yaml
-│       ├── cloud-architect.yaml
-│       ├── observability-engineer.yaml
-│       ├── api-designer.yaml
-│       ├── security-auditor.yaml
-│       ├── project-manager.yaml
-│       ├── agile-coach.yaml
-│       └── quality-assurance.yaml
-├── prompts/                 # プロンプト定義（16個）
-│   ├── *.md (各エージェント用)
-├── templates/               # テンプレート集
-│   ├── er-diagram-template.mmd
-│   ├── table-definition-template.md
-│   ├── migration-plan-template.md
-│   └── index-strategy-template.md
-├── docs/                    # ドキュメント
+├── .github/
+│   └── agents/               # GitHub Copilot公式仕様準拠のエージェント定義（18個）
+│       ├── orchestrator.md
+│       ├── requirements-analyst.md
+│       ├── system-architect.md
+│       ├── database-schema-designer.md
+│       ├── api-designer.md
+│       ├── uiux-designer.md
+│       ├── cloud-architect.md
+│       ├── code-reviewer.md
+│       ├── bug-hunter.md
+│       ├── performance-optimizer.md
+│       ├── test-engineer.md
+│       ├── quality-assurance.md
+│       ├── security-auditor.md
+│       ├── devops-engineer.md
+│       ├── observability-engineer.md
+│       ├── project-manager.md
+│       ├── agile-coach.md
+│       └── technical-writer.md
+├── docs/                     # ドキュメント
 │   ├── USER_GUIDE.md
-│   ├── agent-roadmap.md
-│   └── ONEROSTER_API_HUB_DEVELOPMENT_GUIDE.md
+│   ├── AGENT_REGISTRY.md
+│   └── agent-roadmap.md
 └── README.md
+```
+
+### ファイル形式
+
+各エージェントファイルは**GitHub Copilot公式仕様**に準拠：
+
+```yaml
+---
+name: "Agent Name"
+description: "Agent description"
+---
+
+# Agent Prompt Content
+（プロンプトの詳細な内容）
 ```
 
 ## 🛠️ カスタマイズ
 
 ### エージェントのカスタマイズ
 
-`.copilot/agents/*.yaml` と `prompts/*.md` を編集してエージェントをカスタマイズできます。
+`.github/agents/*.md` を直接編集してエージェントをカスタマイズできます。
 
-```yaml
-# .copilot/agents/custom-agent.yaml
+```markdown
+---
 name: "Custom Agent"
-slug: "custom"
 description: "カスタムエージェントの説明"
-entrypoint: "prompts/custom-agent.md"
-# ...
+tools: ["shell", "read", "edit", "search"]  # オプション（省略するとすべてのツールが有効）
+---
+
+# Custom Agent Prompt
+
+あなたは「カスタムエージェント」です。
+（プロンプトの内容）
 ```
 
 ### 新しいエージェントの追加
 
-1. `.copilot/agents/` にYAML設定ファイルを作成
-2. `prompts/` にプロンプトファイル（Markdown）を作成
+1. `.github/agents/` に新しいMarkdownファイル（`.md`）を作成
+2. YAMLフロントマター（name, description）とプロンプトを記述
 3. エディタを再起動
 
-詳細は [エージェント開発ロードマップ](docs/agent-roadmap.md) を参照してください。
+詳細は [GitHub Copilot公式ドキュメント](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents) を参照してください。
 
 ## 📊 各エージェントの主な機能
 
@@ -267,7 +329,7 @@ entrypoint: "prompts/custom-agent.md"
 ### Code Reviewer AI
 - OWASP Top 10チェック
 - パフォーマンス分析
-- 複雑度測定
+- 複雑度測定（Cyclomatic Complexity）
 - リファクタリング提案
 - ベストプラクティス検証
 
@@ -290,26 +352,26 @@ entrypoint: "prompts/custom-agent.md"
 - Docker/Kubernetes
 - Terraform/CloudFormation
 - 監視・アラート設定
-- デプロイ戦略
+- デプロイ戦略（Blue-Green、Canary）
 
 ### API Designer AI
 - RESTful API設計
 - GraphQLスキーマ
 - OpenAPI 3.0仕様
-- 認証・認可戦略
-- バージョニング
+- 認証・認可戦略（OAuth2、JWT）
+- バージョニング戦略
 
 ### Security Auditor AI
 - 脆弱性診断
-- OWASP Top 10
+- OWASP Top 10準拠
 - 依存関係チェック
 - セキュアコーディング
 - コンプライアンス監査
 
 ### Requirements Analyst AI
-- ユーザーストーリー
+- ユーザーストーリー作成
 - ユースケース設計
-- 受け入れ基準
+- 受け入れ基準定義
 - MoSCoW優先順位付け
 - 要件トレーサビリティ
 
@@ -323,14 +385,14 @@ entrypoint: "prompts/custom-agent.md"
 ### Project Manager AI
 - WBS作成
 - リスク管理
-- 工数見積もり
+- 工数見積もり（PERT、三点見積もり）
 - スプリント計画
 - ステークホルダー管理
 
 ### Bug Hunter AI
 - エラーログ分析
 - スタックトレース解析
-- 根本原因分析（5 Whys）
+- 根本原因分析（5 Whys、RCA）
 - 修正パッチ提案
 - 再発防止策
 
@@ -338,18 +400,18 @@ entrypoint: "prompts/custom-agent.md"
 - ボトルネック検出
 - アルゴリズム計算量分析（Big-O）
 - メモリ使用量最適化
-- クエリ最適化（N+1問題）
+- クエリ最適化（N+1問題解決）
 - キャッシング戦略
 
 ### UI/UX Designer AI
 - ワイヤーフレーム作成
 - ユーザーフロー設計
 - デザインシステム提案
-- アクセシビリティチェック（WCAG）
+- アクセシビリティチェック（WCAG 2.1）
 - レスポンシブデザイン
 
 ### Observability Engineer AI
-- ログ・メトリクス・トレース設計
+- ログ・メトリクス・トレース設計（OpenTelemetry）
 - SLI/SLO定義
 - Grafanaダッシュボード設計
 - アラートルール作成
@@ -369,9 +431,38 @@ entrypoint: "prompts/custom-agent.md"
 - 欠陥密度分析
 - 静的解析ツール設定
 
+### Orchestrator AI
+- エージェント自動選択
+- ワークフロー調整
+- タスク分解
+- 結果統合
+- 進捗管理
+
+## 📖 ドキュメント
+
+- **[利用者ガイド](docs/USER_GUIDE.md)** - 詳細な使い方とサンプル
+- **[エージェントレジストリ](docs/AGENT_REGISTRY.md)** - 全エージェントの詳細仕様
+- **[開発ロードマップ](docs/agent-roadmap.md)** - 今後の拡張計画
+- **[GitHub Copilot公式ドキュメント](https://docs.github.com/en/copilot/reference/custom-agents-configuration)** - カスタムエージェント仕様
+
+## 🔍 技術仕様
+
+- **GitHub Copilot公式仕様準拠**: [Creating Custom Agents](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)
+- **必須フィールド**: `name`, `description`
+- **オプションフィールド**: `tools` (省略時はすべてのツールが有効)
+- **ファイル形式**: Markdown（`.md`）with YAMLフロントマター
+- **配置場所**: `.github/agents/`
+
 ## 🤝 コントリビューション
 
 プルリクエストを歓迎します。大きな変更の場合は、まずIssueで議論してください。
+
+### コントリビューションガイドライン
+
+1. GitHub Copilot公式仕様に準拠すること
+2. 対話型フロー（1問1答形式）を含めること
+3. 成果物をファイル出力すること
+4. 日本語で記述すること
 
 ## 📄 ライセンス
 

@@ -1,3 +1,8 @@
+---
+name: "DevOps Engineer AI"
+description: "CI/CD設計・インフラ自動化・コンテナ化・IaC生成を支援するCopilotエージェント"
+---
+
 # DevOps Engineer AI (Copilot版)
 
 ## 1. 役割定義

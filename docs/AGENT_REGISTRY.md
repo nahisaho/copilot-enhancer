@@ -10,7 +10,7 @@
 
 **役割**: 16個の専門エージェントを統括・管理し、最適なワークフローを調整
 
-**プロンプトファイル**: `prompts/orchestrator.md`
+**エージェントファイル**: `.github/agents/orchestrator.md`
 
 **主な機能**:
 - エージェント自動選択
@@ -34,7 +34,7 @@
 
 **役割**: 要件定義・分析、ステークホルダー分析、要件文書化
 
-**プロンプトファイル**: `prompts/requirements-analyst.md`
+**エージェントファイル**: `.github/agents/requirements-analyst.md`
 
 **主な機能**:
 - 機能要件・非機能要件定義
@@ -58,7 +58,7 @@
 
 **役割**: データベース設計、正規化、パフォーマンス最適化
 
-**プロンプトファイル**: `prompts/database-schema-designer.md`
+**エージェントファイル**: `.github/agents/database-schema-designer.md`
 
 **主な機能**:
 - ER図作成（Mermaid形式）
@@ -82,7 +82,7 @@
 
 **役割**: RESTful API、GraphQL、gRPC設計
 
-**プロンプトファイル**: `prompts/api-designer.md`
+**エージェントファイル**: `.github/agents/api-designer.md`
 
 **主な機能**:
 - OpenAPI (Swagger) 仕様書作成
@@ -106,7 +106,7 @@
 
 **役割**: ユーザーインターフェース・ユーザーエクスペリエンス設計
 
-**プロンプトファイル**: `prompts/uiux-designer.md`
+**エージェントファイル**: `.github/agents/uiux-designer.md`
 
 **主な機能**:
 - ペルソナ設計
@@ -130,7 +130,7 @@
 
 **役割**: クラウドインフラ設計、コスト最適化
 
-**プロンプトファイル**: `prompts/cloud-architect.md`
+**エージェントファイル**: `.github/agents/cloud-architect.md`
 
 **主な機能**:
 - AWS/GCP/Azure アーキテクチャ設計
@@ -156,7 +156,7 @@
 
 **役割**: コードレビュー、品質分析
 
-**プロンプトファイル**: `prompts/code-reviewer.md`
+**エージェントファイル**: `.github/agents/code-reviewer.md`
 
 **主な機能**:
 - コード品質分析（複雑度、可読性、保守性）
@@ -180,7 +180,7 @@
 
 **役割**: バグ調査、原因特定、修正提案
 
-**プロンプトファイル**: `prompts/bug-hunter.md`
+**エージェントファイル**: `.github/agents/bug-hunter.md`
 
 **主な機能**:
 - バグ原因分析（ログ解析、スタックトレース）
@@ -204,7 +204,7 @@
 
 **役割**: パフォーマンス分析・最適化
 
-**プロンプトファイル**: `prompts/performance-optimizer.md`
+**エージェントファイル**: `.github/agents/performance-optimizer.md`
 
 **主な機能**:
 - ボトルネック分析
@@ -230,7 +230,7 @@
 
 **役割**: テスト設計・自動テスト生成
 
-**プロンプトファイル**: `prompts/test-engineer.md`
+**エージェントファイル**: `.github/agents/test-engineer.md`
 
 **主な機能**:
 - ユニットテスト生成
@@ -254,7 +254,7 @@
 
 **役割**: 品質保証プロセス全体の管理
 
-**プロンプトファイル**: `prompts/quality-assurance.md`
+**エージェントファイル**: `.github/agents/quality-assurance.md`
 
 **主な機能**:
 - テスト計画書作成
@@ -278,7 +278,7 @@
 
 **役割**: セキュリティ監査、脆弱性診断
 
-**プロンプトファイル**: `prompts/security-auditor.md`
+**エージェントファイル**: `.github/agents/security-auditor.md`
 
 **主な機能**:
 - OWASP Top 10診断
@@ -304,7 +304,7 @@
 
 **役割**: CI/CD、インフラ自動化
 
-**プロンプトファイル**: `prompts/devops-engineer.md`
+**エージェントファイル**: `.github/agents/devops-engineer.md`
 
 **主な機能**:
 - GitHub Actions/GitLab CI設定
@@ -328,7 +328,7 @@
 
 **役割**: 監視・可観測性
 
-**プロンプトファイル**: `prompts/observability-engineer.md`
+**エージェントファイル**: `.github/agents/observability-engineer.md`
 
 **主な機能**:
 - Prometheus/Grafana設定
@@ -354,7 +354,7 @@
 
 **役割**: プロジェクト管理、進捗管理
 
-**プロンプトファイル**: `prompts/project-manager.md`
+**エージェントファイル**: `.github/agents/project-manager.md`
 
 **主な機能**:
 - プロジェクト計画書作成
@@ -378,7 +378,7 @@
 
 **役割**: アジャイル開発支援
 
-**プロンプトファイル**: `prompts/agile-coach.md`
+**エージェントファイル**: `.github/agents/agile-coach.md`
 
 **主な機能**:
 - スプリント計画
@@ -402,7 +402,7 @@
 
 **役割**: 技術文書作成
 
-**プロンプトファイル**: `prompts/technical-writer.md`
+**エージェントファイル**: `.github/agents/technical-writer.md`
 
 **主な機能**:
 - APIドキュメント作成

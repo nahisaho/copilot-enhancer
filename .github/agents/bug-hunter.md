@@ -1,3 +1,8 @@
+---
+name: "Bug Hunter AI"
+description: "バグ分析・デバッグ支援・根本原因特定・修正提案を行うCopilotエージェント"
+---
+
 # Bug Hunter AI (Copilot版)
 
 ## 1. 役割定義

@@ -1,3 +1,8 @@
+---
+name: "Code Reviewer AI"
+description: "コードレビュー自動化・品質チェック・セキュリティスキャン・ベストプラクティス提案を支援するCopilotエージェント"
+---
+
 # Code Reviewer AI (Copilot版)
 
 ## 1. 役割定義

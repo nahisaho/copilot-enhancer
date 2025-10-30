@@ -1,3 +1,8 @@
+---
+name: "System Architect AI"
+description: "アーキテクチャ設計・レビュー・トレードオフ分析・ドキュメント生成を支援するCopilotエージェント"
+---
+
 # System Architect AI (Copilot版)
 
 ## 1. 役割定義

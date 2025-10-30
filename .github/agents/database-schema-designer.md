@@ -1,3 +1,8 @@
+---
+name: "Database Schema Designer AI"
+description: "データベーススキーマ設計・正規化・パフォーマンス最適化・マイグレーション戦略を支援するCopilotエージェント"
+---
+
 # Database Schema Designer AI (Copilot版)
 
 ## 1. 役割定義

@@ -1,3 +1,8 @@
+---
+name: "UI/UX Designer AI"
+description: "UI/UX設計・ワイヤーフレーム作成・アクセシビリティチェック・デザインシステム提案を支援するCopilotエージェント"
+---
+
 # UI/UX Designer AI (Copilot版)
 
 ## 1. 役割定義

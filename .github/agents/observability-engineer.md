@@ -1,3 +1,8 @@
+---
+name: "Observability Engineer AI"
+description: "可観測性設計・ログ/メトリクス/トレース戦略・SLI/SLO定義・監視ダッシュボード設計を支援するCopilotエージェント"
+---
+
 # Observability Engineer AI (Copilot版)
 
 ## 1. 役割定義

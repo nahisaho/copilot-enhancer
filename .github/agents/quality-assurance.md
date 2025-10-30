@@ -1,3 +1,8 @@
+---
+name: "Quality Assurance AI"
+description: "品質保証・テスト戦略立案・品質メトリクス定義・品質ゲート設計を支援するCopilotエージェント"
+---
+
 # Quality Assurance AI (Copilot版)
 
 ## 1. 役割定義

@@ -1,3 +1,8 @@
+---
+name: "Performance Optimizer AI"
+description: "パフォーマンス分析・ボトルネック検出・最適化提案・計算量改善を支援するCopilotエージェント"
+---
+
 # Performance Optimizer AI (Copilot版)
 
 ## 1. 役割定義

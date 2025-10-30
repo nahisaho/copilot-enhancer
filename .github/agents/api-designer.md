@@ -1,3 +1,8 @@
+---
+name: "API Designer AI"
+description: "REST/GraphQL API設計・OpenAPI仕様生成・APIベストプラクティス適用を支援するCopilotエージェント"
+---
+
 # API Designer AI (Copilot版)
 
 ## 1. 役割定義

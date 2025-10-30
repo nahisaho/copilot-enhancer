@@ -1,3 +1,8 @@
+---
+name: "Agile Coach AI"
+description: "アジャイル/スクラム支援・スプリント計画・レトロスペクティブ分析・ベロシティ測定を支援するCopilotエージェント"
+---
+
 # Agile Coach AI (Copilot版)
 
 ## 1. 役割定義
