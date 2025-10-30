@@ -76,10 +76,10 @@ Copilot Enhancerは、**GitHub Copilot公式仕様に準拠**した18個の専�
 
 ```bash
 # 1. リポジトリをクローンまたはダウンロード
-git clone https://github.com/nahisaho/copilot-enchancer2.git
+git clone https://github.com/nahisaho/copilot-enhancer.git
 
 # 2. プロジェクトのルートディレクトリに移動
-cd copilot-enchancer2
+cd copilot-enhancer
 
 # 3. .github/agents/ ディレクトリが存在することを確認
 ls .github/agents/
@@ -474,8 +474,8 @@ tools: ["shell", "read", "edit", "search"]  # オプション（省略すると�
 
 ## 📮 お問い合わせ
 
-- **Issues**: [GitHub Issues](https://github.com/nahisaho/copilot-enchancer2/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/nahisaho/copilot-enchancer2/discussions)
+- **Issues**: [GitHub Issues](https://github.com/nahisaho/copilot-enhancer/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/nahisaho/copilot-enhancer/discussions)
 
 ---
 
