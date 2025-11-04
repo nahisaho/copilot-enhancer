@@ -91,6 +91,11 @@ ls .github/agents/
 
 #### 単一エージェントの利用
 
+```
+cd copilot-enhancer
+code .
+```
+
 GitHub Copilot のチャット画面で `@workspace /` に続けてエージェント名を入力:
 
 ```
