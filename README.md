@@ -89,12 +89,14 @@ ls .github/agents/
 
 ### 基本的な使い方
 
-#### 単一エージェントの利用
+#### VS Code の起動
 
 ```
 cd copilot-enhancer
 code .
 ```
+
+#### 単一エージェントの利用
 
 GitHub Copilot のチャット画面で `@workspace /` に続けてエージェント名を入力:
 
@@ -115,7 +117,7 @@ GitHub Copilot のチャット画面で `@workspace /` に続けてエージェ�
 
 #### Orchestratorによる自動化（推奨）
 
-複雑なプロジェクトや複数エージェントが必要な場合は、Orchestratorに任せることで自動的に最適なワークフローが実行されます：
+複雑なプロジェクトや複数エージェントが必要な場合は、Orchestratorに任せることで自動的に最適なワークフローが実行されます。
 
 ```
 @workspace /orchestrator
